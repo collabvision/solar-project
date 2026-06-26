@@ -8,8 +8,11 @@ import {
   Leaf,
   ShieldCheck,
   Building2,
-  Menu,X
+  Menu,
+  X,
 } from "lucide-react";
+import Navbar from "@/app/(component)/Navbar"
+import Footer from "@/app/(component)/Footer"
 
 /* =========================================================
    Wattworks Energies — Solar Landing Page (Next.js / JSX)
@@ -308,95 +311,7 @@ export default function WattworksLandingPage() {
   return (
     <>
       {/* ===================== HEADER ===================== */}
-      <header className="site-header">
-        <div className="container">
-          {/* Mobile Navbar */}
-          <div className="mobile-nav">
-            <div className="mobile-logo">
-              <h2>Wattworks</h2>
-              <span>ENERGIES</span>
-            </div>
-
-            <button
-              className="menu-btn"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? (
-                <X size={28} strokeWidth={2.5} />
-              ) : (
-                <Menu size={28} strokeWidth={2.5} />
-              )}
-            </button>
-          </div>
-
-          {mobileMenuOpen && (
-  <div className="mobile-menu">
-    <a href="#about" onClick={() => setMobileMenuOpen(false)}>
-      About Us
-    </a>
-
-    <a href="#services" onClick={() => setMobileMenuOpen(false)}>
-      Services
-    </a>
-
-    <a href="#projects" onClick={() => setMobileMenuOpen(false)}>
-      Projects
-    </a>
-
-    <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
-      FAQ
-    </a>
-
-    <a
-      href="tel:+919845853002"
-      className="mobile-quote-btn"
-      onClick={() => setMobileMenuOpen(false)}
-    >
-      Get Quote
-    </a>
-  </div>
-)}
-
-          {/* Desktop Navbar */}
-          <div className="nav-wrapper">
-            <div className="nav-left">
-              <a href="#about" className="nav-pill active">
-                About Us
-              </a>
-              <a href="#services" className="nav-pill">
-                Services
-              </a>
-              <a href="#projects" className="nav-pill">
-                Projects
-              </a>
-              <a href="#faq" className="nav-pill">
-                FAQ
-              </a>
-            </div>
-
-            <div className="nav-center">
-              <div className="logo-curved-container">
-                <a href="#">Wattworks</a>
-                <span>Energies</span>
-              </div>
-            </div>
-
-            <div className="nav-right">
-              <input
-                type="text"
-                className="search-bar"
-                placeholder="Search services..."
-              />
-
-              <a href="tel:+919845853002" className="btn-black">
-                Get Quote
-                <span style={{ transform: "rotate(-45deg)" }}>➔</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-      {/* ===================== HERO ===================== */}
+<Navbar theme="dark" />      {/* ===================== HERO ===================== */}
       <section className="hero-canvas" id="home" ref={heroRef}>
         <div className="hero-content">
           <h1>
@@ -867,31 +782,51 @@ export default function WattworksLandingPage() {
       </section>
 
       {/* ===================== MARQUEE ===================== */}
-      <div className="marquee-container">
-        <div className="marquee-track">
-          {[
-            "rooftop solar",
-            "epc",
-            "energy audits",
-            "carports",
-            "ev charging",
-            "net metering",
-            "amc services",
-          ]
-            .concat([
-              "rooftop solar",
-              "epc",
-              "energy audits",
-              "carports",
-              "ev charging",
-              "net metering",
-              "amc services",
-            ])
-            .map((t, i) => (
-              <span key={i}>{t}</span>
-            ))}
-        </div>
-      </div>
+  <section className="marquee-section">
+
+
+
+  <div className="marquee-container">
+
+    <div className="marquee-track">
+
+      {[
+        "Rooftop Solar",
+        "Solar EPC",
+        "Engineering Consultancy",
+        "Energy Audits",
+        "Ground Mounted Solar",
+        "Solar Carports",
+        "EV Charging",
+        "Net Metering",
+        "Solar Financing",
+        "Operations & Maintenance",
+        "Solar Water Pumps",
+        "Heat Pumps",
+      ]
+        .concat([
+          "Rooftop Solar",
+          "Solar EPC",
+          "Engineering Consultancy",
+          "Energy Audits",
+          "Ground Mounted Solar",
+          "Solar Carports",
+          "EV Charging",
+          "Net Metering",
+          "Solar Financing",
+          "Operations & Maintenance",
+          "Solar Water Pumps",
+          "Heat Pumps",
+        ])
+        .map((item, index) => (
+          <span key={index}>{item}</span>
+        ))}
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* ===================== SERVICE SWITCHER ===================== */}
       <section className="dept-switcher-section">
@@ -1064,86 +999,8 @@ export default function WattworksLandingPage() {
       </section>
 
       {/* ===================== FOOTER ===================== */}
-      <footer>
-        <div className="container">
-          <div className="footer-giant-text reveal" ref={addReveal}>
-            WATTWORKS CONTACT
-          </div>
-
-          <div className="footer-bottom-grid">
-            <div className="footer-col">
-              <h4
-                style={{
-                  color: "var(--text-main)",
-                  fontSize: "1.4rem",
-                  marginBottom: 15,
-                  fontWeight: 700,
-                }}
-              >
-                Wattworks Energies
-              </h4>
-              <p>
-                Solar Consultancy | EPC | Energy Audits | Solar Carports | EV
-                Charging Stations | Operations &amp; Maintenance.
-              </p>
-              <p style={{ marginTop: 14 }}>
-                Call: <a href="tel:+919845853002">+91 98458 53002</a>
-                <br />
-                Email:{" "}
-                <a href="mailto:biz@wattworksenergies.com">
-                  biz@wattworksenergies.com
-                </a>
-                <br />
-                Locations Served: Maharashtra, Karnataka &amp; Goa
-              </p>
-            </div>
-            <div className="footer-col">
-              <h5>About Us</h5>
-              <ul>
-                <li>
-                  <a href="#about">Our Story</a>
-                </li>
-                <li>
-                  <a href="#projects">Projects</a>
-                </li>
-                <li>
-                  <a href="#">Careers</a>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h5>FAQ</h5>
-              <ul>
-                <li>
-                  <a href="#faq">Net Metering</a>
-                </li>
-                <li>
-                  <a href="#faq">Govt. Approvals</a>
-                </li>
-                <li>
-                  <a href="#faq">Space Requirements</a>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h5>Contact Us</h5>
-              <ul>
-                <li>
-                  <a href="mailto:biz@wattworksenergies.com">
-                    biz@wattworksenergies.com
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+919845853002">+91 98458 53002</a>
-                </li>
-                <li>
-                  <a href="#">Maharashtra · Karnataka · Goa</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
+     
 
       <style jsx global>{`
         :root {
@@ -1450,7 +1307,7 @@ export default function WattworksLandingPage() {
           border: 1px solid #e2e8f0;
         }
         .large-headline {
-          font-size: 3.5rem;
+          font-size: 2.5rem;
           font-weight: 700;
           text-align: center;
           letter-spacing: -1.5px;
@@ -2329,7 +2186,7 @@ export default function WattworksLandingPage() {
 ========================= */
 
         .hero-floating-bottom-bar {
-          position: absolute;
+          position: sticky;
 
           bottom: 35px;
 
@@ -2636,47 +2493,138 @@ export default function WattworksLandingPage() {
           }
         }
 
-        .mobile-menu{
-    display:none;
+        .mobile-menu {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+
+            margin-top: 14px;
+
+            padding: 20px;
+
+            border-radius: 20px;
+
+            background: white;
+
+            backdrop-filter: blur(20px);
+          }
+
+          .mobile-menu a {
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+          }
+
+          .mobile-quote-btn {
+            background: white;
+            color: #0f172a !important;
+
+            text-align: center;
+
+            padding: 14px;
+
+            border-radius: 12px;
+          }
+        }
+
+        .marquee-section{
+    padding:80px 0;
+    background:#fff;
+    overflow:hidden;
 }
 
-@media (max-width:768px){
-
-.mobile-menu{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-
-    margin-top:14px;
-
-    padding:20px;
-
-    border-radius:20px;
-
-    background:white;
-
-    backdrop-filter:blur(20px);
-}
-
-.mobile-menu a{
-    color:black;
-    text-decoration:none;
-    font-weight:600;
-    text-align:center
-}
-
-.mobile-quote-btn{
-    background:white;
-    color:#0f172a !important;
-
+.marquee-heading{
     text-align:center;
-
-    padding:14px;
-
-    border-radius:12px;
+    margin-bottom:40px;
 }
 
+.section-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:999px;
+    border:1px solid #e5e7eb;
+    background:#fff;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
 }
+
+.marquee-heading h2{
+    margin-top:22px;
+    font-size:52px;
+    font-weight:800;
+    line-height:1.1;
+    color:#0f172a;
+}
+
+.marquee-container{
+    position:relative;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.marquee-track{
+    display:flex;
+    width:max-content;
+    animation:marquee 30s linear infinite;
+}
+
+.marquee-track span{
+    margin-right:18px;
+    padding:16px 30px;
+    border-radius:999px;
+    background:#0f172a;
+    color:#fff;
+    font-weight:600;
+    font-size:16px;
+    white-space:nowrap;
+    box-shadow:0 12px 30px rgba(15,23,42,.12);
+    transition:.3s;
+}
+
+.marquee-track span:hover{
+    background:#1e293b;
+    transform:translateY(-4px);
+}
+
+@keyframes marquee{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+@media(max-width:768px){
+
+    .marquee-section{
+        padding:60px 0;
+    }
+
+    .marquee-heading h2{
+        font-size:36px;
+    }
+
+    .marquee-track span{
+        padding:12px 22px;
+        font-size:14px;
+    }
+
+    .marquee-container{
+        margin-top:20px;
+    }
+
+}
+
       `}</style>
     </>
   );
