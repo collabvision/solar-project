@@ -18,12 +18,60 @@ import {
   FileBadge,
   Clock3,
 } from "lucide-react";
-import Navbar from "@/app/(component)/Navbar"
-import Footer from "@/app/(component)/Footer"
+import Navbar from "@/app/(component)/Navbar";
+import Footer from "@/app/(component)/Footer";
+import { useState } from "react";
 const page = () => {
+  const [form, setForm] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const payload = {
+      name: form.name,
+      mobile: form.mobile,
+      email: form.email,
+      service: form.service,
+      message: form.message,
+    };
+      const id = process.env.NEXT_PUBLIC_VISION9_LEADSHEET_APPSCRIPT_API_ID;
+      console.log(
+        "click form :" +
+          id +
+          `https://script.google.com/macros/s/${process.env.NEXT_PUBLIC_VISION9_LEADSHEET_APPSCRIPT_API_ID}/exec`,
+      );
+    try {
+         const res = await fetch(`https://script.google.com/macros/s/${id}/exec`, {
+
+    method: "POST",
+        headers: {
+          // Keep this as text/plain to avoid complex CORS pre-flight checks
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+    body: JSON.stringify(form),
+  }
+);
+
+const data = await res.json();
+
+
+      if (data.success) {
+        alert("Submitted Successfully");
+      } else {
+        alert("Submission Failed");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
-      <div>
-          <Navbar theme="light" />
+    <div>
+      <Navbar theme="light" />
       <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-28">
         {/* Background Blur */}
 
@@ -160,50 +208,85 @@ const page = () => {
                   form and our experts will get in touch with you.
                 </p>
 
-                <form className="mt-10 space-y-5">
+                <form onSubmit={onSubmit} className="mt-10 space-y-5">
                   <input
                     type="text"
                     placeholder="Full Name"
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    required
                     className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-5 outline-none transition focus:border-slate-900"
                   />
 
                   <input
                     type="tel"
                     placeholder="Mobile Number"
+                    value={form.mobile}
+                    onChange={(e) =>
+                      setForm({ ...form, mobile: e.target.value })
+                    }
+                    required
                     className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-5 outline-none transition focus:border-slate-900"
                   />
 
                   <input
                     type="email"
                     placeholder="Email Address"
+                    value={form.email}
+                    onChange={(e) =>
+                      setForm({ ...form, email: e.target.value })
+                    }
+                    required
                     className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-5 outline-none transition focus:border-slate-900"
                   />
 
-                  <select className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-5 outline-none transition focus:border-slate-900">
-                    <option>Select Service</option>
+                  <select
+                    value={form.service}
+                    onChange={(e) =>
+                      setForm({ ...form, service: e.target.value })
+                    }
+                    required
+                    className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-5 outline-none transition focus:border-slate-900"
+                  >
+                    <option value="">Select Service</option>
 
-                    <option>Residential Rooftop Solar</option>
+                    <option value="Residential Rooftop Solar">
+                      Residential Rooftop Solar
+                    </option>
 
-                    <option>Commercial Solar Installation</option>
+                    <option value="Commercial Solar Installation">
+                      Commercial Solar Installation
+                    </option>
 
-                    <option>Industrial Solar Power Plant</option>
+                    <option value="Industrial Solar Power Plant">
+                      Industrial Solar Power Plant
+                    </option>
 
-                    <option>Ground Mounted Solar Plant</option>
+                    <option value="Ground Mounted Solar Plant">
+                      Ground Mounted Solar Plant
+                    </option>
 
-                    <option>Solar EPC Project</option>
+                    <option value="Solar EPC Project">Solar EPC Project</option>
 
-                    <option>Solar Consultancy</option>
+                    <option value="Solar Consultancy">Solar Consultancy</option>
 
-                    <option>Energy Audit</option>
+                    <option value="Energy Audit">Energy Audit</option>
 
-                    <option>Solar Financing</option>
+                    <option value="Solar Financing">Solar Financing</option>
 
-                    <option>EV Charging Station</option>
+                    <option value="EV Charging Station">
+                      EV Charging Station
+                    </option>
                   </select>
 
                   <textarea
                     rows={5}
                     placeholder="Tell us about your project..."
+                    value={form.message}
+                    onChange={(e) =>
+                      setForm({ ...form, message: e.target.value })
+                    }
+                    required
                     className="w-full rounded-2xl border border-slate-200 bg-slate-50 p-5 outline-none transition focus:border-slate-900"
                   />
 
@@ -323,7 +406,6 @@ const page = () => {
               </div>
             </div>
           </div>{" "}
-        
         </div>
       </section>
 
@@ -489,9 +571,9 @@ const page = () => {
             </div>
           </div>
         </div>
-          </section>
-          
-          <Footer/>
+      </section>
+
+      <Footer />
     </div>
   );
 };
