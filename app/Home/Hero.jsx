@@ -1016,8 +1016,7 @@ export default function WattworksLandingPage() {
           --curve-preset: cubic-bezier(0.25, 1, 0.5, 1);
         }
         * {
-          margin: 0;
-          padding: 0;
+        
           box-sizing: border-box;
           font-family: var(--font-display);
           scroll-behavior: smooth;
@@ -1056,94 +1055,9 @@ export default function WattworksLandingPage() {
           transform: translateY(0);
         }
 
-        .site-header {
-          position: absolute;
-          top: 20px;
-          left: 0;
-          width: 100%;
-          z-index: 100;
-        }
-        .nav-wrapper {
-          background: rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(25px);
-          -webkit-backdrop-filter: blur(25px);
-          border: 1px solid rgba(255, 255, 255, 0.25);
-          border-radius: 100px;
-          display: grid;
-          grid-template-columns: 1fr auto 1fr;
-          align-items: center;
-          padding: 10px 30px;
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-        }
-        .nav-left {
-          display: flex;
-          gap: 12px;
-        }
-        .nav-pill {
-          text-decoration: none;
-          color: var(--white);
-          font-size: 0.85rem;
-          font-weight: 500;
-          padding: 8px 18px;
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          border-radius: 50px;
-          transition: all 0.3s ease;
-        }
-        .nav-pill:hover,
-        .nav-pill.active {
-          background: var(--white);
-          color: var(--primary);
-        }
-        .nav-center {
-          position: relative;
-        }
-        .logo-curved-container {
-          background: var(--white);
-          padding: 15px 40px;
-          border-radius: 0 0 35px 35px;
-          margin-top: -12px;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-          text-align: center;
-          animation: pulseGlow 3s infinite;
-        }
-        .logo-curved-container a {
-          text-decoration: none;
-          font-weight: 800;
-          font-size: 1.4rem;
-          color: var(--text-main);
-          letter-spacing: -0.5px;
-        }
-        .logo-curved-container span {
-          display: block;
-          font-size: 0.65rem;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          color: var(--text-muted);
-        }
-        .nav-right {
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          gap: 20px;
-        }
-        .search-bar {
-          background: rgba(255, 255, 255, 0.2);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          padding: 8px 16px;
-          border-radius: 50px;
-          color: var(--white);
-          font-size: 0.85rem;
-          outline: none;
-          width: 150px;
-          transition: width 0.4s ease;
-        }
-        .search-bar::placeholder {
-          color: rgba(255, 255, 255, 0.7);
-        }
-        .search-bar:focus {
-          width: 220px;
-          background: rgba(255, 255, 255, 0.3);
-        }
+       
+       
+       
         .btn-black {
           background: var(--bg-dark);
           color: var(--white);
@@ -1696,14 +1610,8 @@ export default function WattworksLandingPage() {
           .hero-content h1 {
             font-size: 3.2rem;
           }
-          .nav-left,
-          .nav-right {
-            display: none;
-          }
-          .nav-wrapper {
-            grid-template-columns: 1fr;
-            justify-content: center;
-          }
+        
+        
         }
 
         .facility-showcase {
@@ -2387,151 +2295,7 @@ export default function WattworksLandingPage() {
           }
         }
 
-        .mobile-nav {
-          display: none;
-        }
-
-        @media (max-width: 768px) {
-          .nav-wrapper {
-            display: none;
-          }
-
-          .mobile-nav {
-            display: flex;
-          }
-        }
-
-        /* Hide mobile nav on desktop */
-        .mobile-nav {
-          display: none;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-          .site-header {
-            top: 12px;
-            padding: 0 14px;
-          }
-
-          .nav-wrapper {
-            display: none;
-          }
-
-          .mobile-nav {
-            display: flex;
-
-            justify-content: space-between;
-            align-items: center;
-
-            background: rgba(255, 255, 255, 0.15);
-
-            backdrop-filter: blur(18px);
-
-            border: 1px solid rgba(255, 255, 255, 0.18);
-
-            border-radius: 20px;
-
-            padding: 14px 18px;
-
-            color: white;
-          }
-
-          .mobile-logo h2 {
-            font-size: 30px;
-
-            font-weight: 800;
-
-            line-height: 1;
-
-            letter-spacing: -1px;
-
-            margin: 0;
-          }
-
-          .mobile-logo span {
-            display: block;
-
-            margin-top: 6px;
-
-            font-size: 11px;
-
-            letter-spacing: 5px;
-
-            opacity: 0.8;
-          }
-
-          .menu-btn {
-            width: 52px;
-            height: 52px;
-
-            border: none;
-
-            border-radius: 16px;
-
-            background: white;
-
-            color: #0f172a;
-
-            font-size: 28px;
-
-            cursor: pointer;
-
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            transition: 0.3s;
-          }
-
-          .menu-btn:hover {
-            transform: rotate(90deg);
-
-            background: #10b981;
-
-            color: white;
-          }
-        }
-
-        .mobile-menu {
-          display: none;
-        }
-
-        @media (max-width: 768px) {
-          .mobile-menu {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-
-            margin-top: 14px;
-
-            padding: 20px;
-
-            border-radius: 20px;
-
-            background: white;
-
-            backdrop-filter: blur(20px);
-          }
-
-          .mobile-menu a {
-            color: black;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-          }
-
-          .mobile-quote-btn {
-            background: white;
-            color: #0f172a !important;
-
-            text-align: center;
-
-            padding: 14px;
-
-            border-radius: 12px;
-          }
-        }
+       
 
         .marquee-section{
     padding:80px 0;
