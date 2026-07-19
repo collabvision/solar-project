@@ -11,8 +11,6 @@ import {
 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import Navbar from "@/app/(component)/Navbar";
 import Footer from "@/app/(component)/Footer";
 // import "./animateHome.css";
@@ -37,7 +35,7 @@ import Footer from "@/app/(component)/Footer";
    ========================================================= */
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, DrawSVGPlugin);
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 const DEPT_CONTENT = {
@@ -281,82 +279,6 @@ const REVIEWS = [
   },
 ];
 
-/* ---------------------------------------------------------
-   PowerLine — a live-wire divider between sections. The wire
-   draws itself in as it enters view, then two pulses of light
-   travel its length forever, like current passing from one
-   section to the next.
---------------------------------------------------------- */
-function PowerLine({ flip = false, height = 90 }) {
-  const wireRef = useRef(null);
-  const pulseRefs = useRef([]);
-  const gradId = flip ? "wireGrad-b" : "wireGrad-a";
-
-  useEffect(() => {
-    const path = wireRef.current;
-    if (!path) return;
-    const ctx = gsap.context(() => {
-      gsap.set(path, { drawSVG: "0%" });
-      gsap.to(path, {
-        drawSVG: "100%",
-        duration: 1.4,
-        ease: "power2.inOut",
-        scrollTrigger: { trigger: path, start: "top 92%" },
-      });
-
-      pulseRefs.current.forEach((pulse, i) => {
-        if (!pulse) return;
-        gsap.set(pulse, { opacity: 0 });
-        gsap.to(pulse, {
-          opacity: 1,
-          duration: 0.2,
-          delay: i * 1.3,
-          scrollTrigger: { trigger: path, start: "top 92%" },
-        });
-        gsap.to(pulse, {
-          motionPath: { path, align: path, alignOrigin: [0.5, 0.5] },
-          duration: 2.6,
-          repeat: -1,
-          delay: i * 1.3,
-          ease: "none",
-        });
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <div className={`power-line ${flip ? "flip" : ""}`} style={{ height }} aria-hidden="true">
-      <svg viewBox="0 0 200 90" preserveAspectRatio="none" width="100%" height="100%">
-        <defs>
-          <linearGradient id={gradId} x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0" />
-            <stop offset="50%" stopColor="#10b981" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
-          </linearGradient>
-          <filter id="wireGlow" x="-80%" y="-80%" width="260%" height="260%">
-            <feGaussianBlur stdDeviation="2.6" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-        <path
-          ref={wireRef}
-          d="M0,45 C40,10 70,80 100,45 C130,10 160,80 200,45"
-          fill="none"
-          stroke={`url(#${gradId})`}
-          strokeWidth="1.5"
-        />
-        {[0, 1].map((i) => (
-          <circle key={i} ref={(el) => (pulseRefs.current[i] = el)} r="4" fill="#6ee7b7" filter="url(#wireGlow)" />
-        ))}
-      </svg>
-    </div>
-  );
-}
-
 export default function WattworksLandingPage() {
   const [activeTab, setActiveTab] = useState("rooftop");
   const [openFaq, setOpenFaq] = useState(0);
@@ -441,39 +363,6 @@ export default function WattworksLandingPage() {
       moveX(px);
       moveY(py);
       tiltTitle((px / rect.width - 0.5) * 5);
-    };
-    hero.addEventListener("mousemove", handler);
-    return () => hero.removeEventListener("mousemove", handler);
-  }, []);
-
-  /* ---------- Cursor spark trail (static-electricity feel in the hero) ---------- */
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-    let last = 0;
-    const handler = (e) => {
-      const now = Date.now();
-      if (now - last < 55) return;
-      last = now;
-      const rect = hero.getBoundingClientRect();
-      const spark = document.createElement("span");
-      spark.className = "cursor-spark";
-      spark.style.left = `${e.clientX - rect.left}px`;
-      spark.style.top = `${e.clientY - rect.top}px`;
-      hero.appendChild(spark);
-      gsap.fromTo(
-        spark,
-        { opacity: 1, scale: 0.4, x: 0, y: 0 },
-        {
-          opacity: 0,
-          scale: 1.8,
-          x: gsap.utils.random(-20, 20),
-          y: gsap.utils.random(-30, -6),
-          duration: 0.75,
-          ease: "power2.out",
-          onComplete: () => spark.remove(),
-        }
-      );
     };
     hero.addEventListener("mousemove", handler);
     return () => hero.removeEventListener("mousemove", handler);
@@ -745,7 +634,7 @@ export default function WattworksLandingPage() {
             businesses, and industries across Maharashtra, Karnataka, and Goa
             reduce electricity costs and achieve energy independence.
           </p>
-          <a href="https://wa.me/919845853002" className="cta-pill-btn electric-btn">
+          <a href="https://wa.me/919845853002" className="cta-pill-btn">
             Get a Free Solar Assessment <span className="arrow-circle">↗</span>
           </a>
         </div>
@@ -790,8 +679,6 @@ export default function WattworksLandingPage() {
           </div>
         </div>
       </section>
-
-      <PowerLine />
 
       {/* ===================== ABOUT / INTRO ===================== */}
       <section className="intro-section" id="about">
@@ -852,7 +739,7 @@ export default function WattworksLandingPage() {
               </div>
             </div>
 
-            <div className="asym-card tilt-card" style={{ marginTop: 40 }}>
+            <div className="asym-card tilt-card" >
               <img
                 src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=600&auto=format&fit=crop"
                 alt="Industrial solar plant"
@@ -896,8 +783,8 @@ export default function WattworksLandingPage() {
               return (
                 <div className="benefit-card tilt-card" key={item.title}>
                   <div
-                    className="benefit-icon charge-ring"
-                    style={{ background: `${item.color}15`, "--charge-color": item.color }}
+                    className="benefit-icon"
+                    style={{ background: `${item.color}15` }}
                   >
                     <Icon size={30} strokeWidth={2.3} color={item.color} />
                   </div>
@@ -919,8 +806,6 @@ export default function WattworksLandingPage() {
           </div>
         </div>
       </section>
-
-      <PowerLine flip />
 
       {/* ===================== INDUSTRIES STRIP ===================== */}
       <section className="facilities-section" id="industries">
@@ -1365,8 +1250,6 @@ export default function WattworksLandingPage() {
         </div>
       </section>
 
-      <PowerLine />
-
       {/* ===================== MISSION / CLOSING CTA ===================== */}
       <section className="mission-section">
         <div className="ambient-orb" style={{ top: "10%", left: "10%", width: 340, height: 340, background: "radial-gradient(circle, rgba(16,185,129,0.18), transparent 70%)" }} />
@@ -1404,15 +1287,13 @@ export default function WattworksLandingPage() {
             Make the switch today and start saving for the next 25 years.
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <a href="https://wa.me/919845853002" className="cta-pill-btn dark electric-btn">
+            <a href="https://wa.me/919845853002" className="cta-pill-btn dark">
               Request Your Free Solar Consultation{" "}
               <span className="arrow-circle">↗</span>
             </a>
           </div>
         </div>
       </section>
-
-      <PowerLine flip />
 
       {/* ===================== FOOTER ===================== */}
       <Footer />
@@ -1473,91 +1354,6 @@ export default function WattworksLandingPage() {
 
         .reveal {
           will-change: transform, opacity;
-        }
-
-        /* ---- electric current system ---- */
-        @property --angle {
-          syntax: "<angle>";
-          inherits: false;
-          initial-value: 0deg;
-        }
-        .electric-btn {
-          position: relative;
-          z-index: 0;
-        }
-        .electric-btn::before {
-          content: "";
-          position: absolute;
-          inset: -3px;
-          border-radius: 999px;
-          padding: 3px;
-          background: conic-gradient(
-            from var(--angle, 0deg),
-            transparent 0turn,
-            transparent 0.86turn,
-            #6ee7b7 0.93turn,
-            #10b981 0.97turn,
-            transparent 1turn
-          );
-          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-          -webkit-mask-composite: xor;
-          mask-composite: exclude;
-          animation: electric-spin 2.2s linear infinite;
-          z-index: -1;
-          pointer-events: none;
-        }
-        @keyframes electric-spin {
-          to {
-            --angle: 360deg;
-          }
-        }
-
-        .power-line {
-          width: 100%;
-          margin: -10px 0;
-          position: relative;
-          z-index: 1;
-          pointer-events: none;
-        }
-        .power-line.flip svg {
-          transform: scaleY(-1);
-        }
-
-        .cursor-spark {
-          position: absolute;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: radial-gradient(circle, #d1fae5, #10b981 60%, transparent 75%);
-          pointer-events: none;
-          z-index: 4;
-          box-shadow: 0 0 10px 2px rgba(16, 185, 129, 0.85);
-        }
-
-        .charge-ring {
-          position: relative;
-        }
-        .charge-ring::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          border-radius: 22px;
-          box-shadow: 0 0 0 0 var(--charge-color, rgba(16, 185, 129, 0.5));
-          animation: chargePulse 2.8s ease-out infinite;
-        }
-        @keyframes chargePulse {
-          0% {
-            box-shadow: 0 0 0 0 var(--charge-color);
-            opacity: 0.55;
-          }
-          70% {
-            box-shadow: 0 0 0 16px var(--charge-color);
-            opacity: 0;
-          }
-          100% {
-            box-shadow: 0 0 0 16px var(--charge-color);
-            opacity: 0;
-          }
         }
 
         /* ---- ambient light + 3D helpers ---- */
@@ -2451,6 +2247,155 @@ export default function WattworksLandingPage() {
             font-size: 14px;
           }
         }
+          /* ==========================
+   ABOUT SECTION MOBILE
+========================== */
+
+@media (max-width:1024px){
+
+    .split-grid-layout{
+        grid-template-columns:1fr;
+        gap:28px;
+        align-items:stretch;
+    }
+
+    .left-info-block{
+        order:1;
+        text-align:center;
+        max-width:700px;
+        margin:auto;
+    }
+
+    .left-info-block h3{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .left-info-block p{
+        margin:20px auto 32px;
+        max-width:650px;
+    }
+
+    .left-info-block .btn-black{
+        justify-content:center;
+    }
+
+    .asym-card{
+        order:2;
+        width:100%;
+        height:420px;
+    }
+
+    .second-card{
+        order:3;
+        margin-top:0 !important;
+    }
+
+}
+    @media (max-width:768px){
+
+    .intro-section{
+        padding:70px 0;
+    }
+
+    .split-grid-layout{
+        gap:22px;
+    }
+
+    .left-info-block{
+        text-align:left;
+    }
+
+    .left-info-block h3{
+        font-size:1.7rem;
+        line-height:1.35;
+    }
+
+    .left-info-block p{
+        font-size:.98rem;
+        line-height:1.8;
+        margin:18px 0 28px;
+    }
+
+    .left-info-block .btn-black{
+        width:100%;
+        justify-content:center;
+    }
+
+    .asym-card{
+        height:340px;
+        border-radius:24px;
+    }
+
+    .card-overlay{
+        padding:22px;
+    }
+
+    .card-tag{
+        top:16px;
+        left:16px;
+        font-size:.72rem;
+        padding:6px 14px;
+    }
+
+    .card-overlay h4{
+        font-size:1.15rem;
+        line-height:1.45;
+        max-width:90%;
+    }
+
+    .card-arrow-btn{
+        width:42px;
+        height:42px;
+        right:18px;
+        bottom:18px;
+    }
+
+}
+    @media (max-width:480px){
+
+    .container{
+        padding:0 18px;
+    }
+
+    .large-headline{
+        font-size:2rem;
+        margin-bottom:50px;
+    }
+
+    .left-info-block h3{
+        font-size:1.45rem;
+    }
+
+    .left-info-block p{
+        font-size:.92rem;
+    }
+
+    .asym-card{
+        height:280px;
+        border-radius:20px;
+    }
+
+    .card-overlay{
+        padding:18px;
+    }
+
+    .card-overlay h4{
+        font-size:1rem;
+        line-height:1.5;
+    }
+
+    .card-tag{
+        font-size:.68rem;
+    }
+
+    .card-arrow-btn{
+        width:38px;
+        height:38px;
+        font-size:.9rem;
+    }
+
+}
       `}</style>
     </div>
   );
