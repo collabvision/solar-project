@@ -154,7 +154,7 @@ const data = await res.json();
 
               {/* Floating Card */}
 
-              <div className="absolute -bottom-8 right-8 rounded-[30px] border border-white/40 bg-white/80 p-6 shadow-2xl backdrop-blur-xl">
+              <div className="absolute bottom-8 right-8 rounded-[30px] border border-white/40 bg-white/80 p-6 shadow-2xl backdrop-blur-xl">
                 <div className="flex items-center gap-5">
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-100">
                     <Phone className="h-8 w-8 text-slate-900" />

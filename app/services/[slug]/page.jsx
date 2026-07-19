@@ -66,20 +66,20 @@ export default async function ServicePage({ params }) {
       {/* =====================================
               HERO
       ===================================== */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-lime-50 via-white to-emerald-50 pt-32 pb-16 md:pt-40 md:pb-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-32 pb-16 md:pt-40 md:pb-24">
         {/* Background */}
 
-        <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-lime-300/20 blur-3xl" />
+        <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-sky-300/20 blur-3xl" />
 
-        <div className="absolute right-0 top-0 h-[32rem] w-[32rem] rounded-full bg-emerald-300/20 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[32rem] w-[32rem] rounded-full bg-blue-300/20 blur-3xl" />
 
-        <div className="absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-yellow-300/20 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-slate-300/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl px-5 sm:px-6">
           <div className="text-center">
             {/* Badge */}
 
-            <span className="inline-flex rounded-full border border-emerald-200 bg-white px-5 py-2 text-sm font-semibold tracking-wide text-emerald-700 shadow">
+            <span className="inline-flex rounded-full border border-slate-200 bg-white px-5 py-2 text-sm font-semibold tracking-wide text-slate-700 shadow">
               {service.hero.badge}
             </span>
 
@@ -100,7 +100,7 @@ export default async function ServicePage({ params }) {
             <div className="mt-12 flex flex-wrap justify-center gap-5">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 rounded-full bg-emerald-600 px-8 py-4 font-semibold text-white transition hover:bg-emerald-700"
+                className="inline-flex items-center gap-3 rounded-full bg-slate-600 px-8 py-4 font-semibold text-white transition hover:bg-slate-700"
               >
                 Get Free Consultation
                 <ArrowUpRight size={18} />
@@ -108,7 +108,7 @@ export default async function ServicePage({ params }) {
 
               <a
                 href="tel:+919845853002"
-                className="inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-900 transition hover:border-emerald-600"
+                className="inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-900 transition hover:border-slate-600"
               >
                 <Phone size={18} />
                 Call Now
@@ -121,7 +121,7 @@ export default async function ServicePage({ params }) {
           <div className="mt-16 rounded-[36px] border border-white/70 bg-white/80 p-8 shadow-2xl backdrop-blur-xl md:p-10">
             <div className="grid gap-8 md:grid-cols-3">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
+                <p className="text-sm font-semibold uppercase tracking-wider text-slate-700">
                   Professional
                 </p>
 
@@ -131,7 +131,7 @@ export default async function ServicePage({ params }) {
               </div>
 
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
+                <p className="text-sm font-semibold uppercase tracking-wider text-slate-700">
                   Sustainable
                 </p>
 
@@ -141,7 +141,7 @@ export default async function ServicePage({ params }) {
               </div>
 
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
+                <p className="text-sm font-semibold uppercase tracking-wider text-slate-700">
                   Reliable
                 </p>
 
@@ -200,13 +200,13 @@ export default async function ServicePage({ params }) {
       <section className="relative overflow-hidden py-16 md:py-20 lg:py-24">
         {/* Background */}
 
-        <div className="absolute -left-40 top-10 h-[30rem] w-[30rem] rounded-full bg-emerald-100/40 blur-[170px]" />
+        <div className="absolute -left-40 top-10 h-[30rem] w-[30rem] rounded-full bg-slate-100/40 blur-[170px]" />
 
-        <div className="absolute right-0 bottom-0 h-[28rem] w-[28rem] rounded-full bg-lime-100/40 blur-[170px]" />
+        <div className="absolute right-0 bottom-0 h-[28rem] w-[28rem] rounded-full bg-slate-100/40 blur-[170px]" />
 
         <div className="relative mx-auto max-w-5xl px-5 sm:px-6">
           <div className="rounded-[36px] border border-slate-200 bg-white p-8 shadow-xl md:p-12 lg:p-16">
-            <span className="inline-flex rounded-full bg-emerald-100 px-5 py-2 text-sm font-semibold text-emerald-700">
+            <span className="inline-flex rounded-full bg-slate-100 px-5 py-2 text-sm font-semibold text-slate-700">
               About This Service
             </span>
 
@@ -214,7 +214,7 @@ export default async function ServicePage({ params }) {
               {service.intro.title}
             </h2>
 
-            <div className="mt-10 space-y-7 border-l-4 border-emerald-500 pl-6">
+            <div className="mt-10 space-y-7 border-l-4 border-slate-500 pl-6">
               {service.intro.paragraphs.map((paragraph) => (
                 <p
                   key={paragraph}
@@ -228,7 +228,7 @@ export default async function ServicePage({ params }) {
             <div className="mt-12 flex flex-wrap gap-4">
               <a
                 href="tel:+919845853002"
-                className="inline-flex items-center gap-3 rounded-full bg-emerald-600 px-8 py-4 font-semibold text-white transition hover:bg-emerald-700"
+                className="inline-flex items-center gap-3 rounded-full bg-slate-600 px-8 py-4 font-semibold text-white transition hover:bg-slate-700"
               >
                 <Phone size={18} />
                 Call Expert
@@ -236,7 +236,7 @@ export default async function ServicePage({ params }) {
 
               <a
                 href="mailto:biz.wattworks@gmail.com"
-                className="inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-900 transition hover:border-emerald-600"
+                className="inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-900 transition hover:border-slate-600"
               >
                 <Mail size={18} />
                 Email Us
@@ -307,7 +307,7 @@ export default async function ServicePage({ params }) {
     className={`relative overflow-hidden py-20 ${
       index % 2 === 0
         ? "bg-white"
-        : "bg-gradient-to-br from-lime-50 via-white to-emerald-50"
+        : "bg-gradient-to-br from-slate-50 via-white to-blue-50"
     }`}
   >
     {/* Background */}
@@ -322,7 +322,7 @@ export default async function ServicePage({ params }) {
         duration: 14,
         ease: "easeInOut",
       }}
-      className="absolute -left-24 top-0 h-80 w-80 rounded-full bg-emerald-200/20 blur-3xl"
+      className="absolute -left-24 top-0 h-80 w-80 rounded-full bg-slate-200/20 blur-3xl"
     />
 
     <motion.div
@@ -335,7 +335,7 @@ export default async function ServicePage({ params }) {
         duration: 18,
         ease: "easeInOut",
       }}
-      className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-yellow-200/20 blur-3xl"
+      className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-200/20 blur-3xl"
     />
 
     <div className="relative mx-auto max-w-7xl px-6">
@@ -349,7 +349,7 @@ export default async function ServicePage({ params }) {
           transition={{ duration: 0.8 }}
           className="lg:col-span-4"
         >
-          <span className="rounded-full bg-emerald-100 px-5 py-2 text-sm font-semibold text-emerald-700">
+          <span className="rounded-full bg-slate-100 px-5 py-2 text-sm font-semibold text-slate-700">
             Section {String(index + 1).padStart(2, "0")}
           </span>
 
@@ -357,7 +357,7 @@ export default async function ServicePage({ params }) {
             {section.title}
           </h2>
 
-          <div className="mt-8 h-1 w-24 rounded-full bg-gradient-to-r from-emerald-500 to-lime-500" />
+          <div className="mt-8 h-1 w-24 rounded-full bg-gradient-to-r from-slate-500 to-slate-500" />
 
           <p className="mt-8 text-lg leading-9 text-slate-600">
             {section.description}
@@ -366,7 +366,7 @@ export default async function ServicePage({ params }) {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="rounded-full bg-emerald-600 px-7 py-4 font-semibold text-white transition-all duration-500 hover:-translate-y-1 hover:bg-emerald-700 hover:shadow-xl"
+              className="rounded-full bg-slate-600 px-7 py-4 font-semibold text-white transition-all duration-500 hover:-translate-y-1 hover:bg-slate-700 hover:shadow-xl"
             >
               Contact Us
             </Link>
@@ -398,7 +398,7 @@ export default async function ServicePage({ params }) {
               {/* Title */}
 
               <div className="mb-8 flex items-center gap-4">
-                <div className="h-12 w-2 rounded-full bg-gradient-to-b from-emerald-500 to-lime-500" />
+                <div className="h-12 w-2 rounded-full bg-gradient-to-b from-slate-500 to-slate-500" />
 
                 <h3 className="text-2xl font-black text-slate-900">
                   {group.title}
@@ -430,10 +430,10 @@ export default async function ServicePage({ params }) {
                       y: -8,
                       scale: 1.03,
                     }}
-                    className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-500 hover:border-emerald-300 hover:shadow-2xl"
+                    className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-500 hover:border-slate-300 hover:shadow-2xl"
                   >
                     <div className="flex items-start gap-5">
-                      <div className="mt-2 h-3 w-3 rounded-full bg-gradient-to-r from-emerald-500 to-lime-500" />
+                      <div className="mt-2 h-3 w-3 rounded-full bg-gradient-to-r from-slate-500 to-slate-500" />
 
                       <p className="leading-8 text-slate-700">
                         {item}

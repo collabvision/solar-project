@@ -12,11 +12,14 @@ export default function Footer() {
           <div className="footer-grid">
             {/* Company */}
             <div>
-              <h3>Wattworks Energies</h3>
-
+              <h3>
+                <Link href="/" className="footer-company-link">
+                  Wattworks Energies
+                </Link>
+              </h3>
               <p>
-                Solar Consultancy | EPC | Energy Audits | Solar Carports |
-                EV Charging Stations | Operations & Maintenance.
+                Solar Consultancy | EPC | Energy Audits | Solar Carports | EV
+                Charging Stations | Operations & Maintenance.
               </p>
 
               <div className="footer-contact">
@@ -54,19 +57,32 @@ export default function Footer() {
             </div>
 
             {/* Services */}
+            {/* Services */}
             <div>
               <h4>Services</h4>
 
               <ul>
-                <li>Rooftop Solar</li>
+                <li>
+                  <Link href="/services/solar-pv">Rooftop Solar</Link>
+                </li>
 
-                <li>Solar EPC</li>
+                <li>
+                  <Link href="/services/solar-pv">Solar EPC</Link>
+                </li>
 
-                <li>Ground Mounted Solar</li>
+                <li>
+                  <Link href="/services/ground-mounted-solar">
+                    Ground Mounted Solar
+                  </Link>
+                </li>
 
-                <li>Energy Audits</li>
+                <li>
+                  <Link href="/services/energy-audits">Energy Audits</Link>
+                </li>
 
-                <li>EV Charging</li>
+                <li>
+                  <Link href="/services/ev-charging">EV Charging</Link>
+                </li>
               </ul>
             </div>
 
@@ -75,9 +91,7 @@ export default function Footer() {
               <h4>Support</h4>
 
               <ul>
-                <li>
-                  <Link href="/faq">FAQ</Link>
-                </li>
+         
 
                 <li>
                   <Link href="/contact">Get Quote</Link>
@@ -99,9 +113,7 @@ export default function Footer() {
             <div className="footer-links">
               <Link href="/privacy-policy">Privacy Policy</Link>
 
-              <Link href="/terms-and-conditions">
-                Terms & Conditions
-              </Link>
+              <Link href="/terms-and-conditions">Terms & Conditions</Link>
             </div>
           </div>
         </div>

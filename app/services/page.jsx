@@ -377,19 +377,19 @@ export default function ServicesPage() {
 
               {/* Floating Card */}
 
-              <div className="absolute -bottom-8 left-8 right-8 rounded-[32px] border border-white/40 bg-white/80 p-8 shadow-2xl backdrop-blur-xl">
-                <h3 className="text-2xl font-black text-slate-900">
+              <div className="absolute bottom-8 left-8 right-8 rounded-[32px] border border-white/60 bg-white/40 p-8 shadow-2xl backdrop-blur-xl">
+                <h3 className="text-2xl font-black text-slate-700">
                   Complete Renewable Energy Solutions
                 </h3>
 
-                <p className="mt-4 leading-8 text-slate-500">
+                <p className="mt-4 leading-8 text-slate-900">
                   Solar Power • EV Charging • Energy Audits • Solar Financing •
                   Consultancy • EPC • Operation & Maintenance
                 </p>
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
                   <div className="rounded-2xl bg-slate-100 p-4 text-center">
-                    <h4 className="text-3xl font-black text-slate-900">100%</h4>
+                    <h4 className="text-xl font-black text-slate-900">100%</h4>
 
                     <p className="mt-1 text-sm text-slate-500">
                       Customized Solutions
@@ -397,7 +397,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="rounded-2xl bg-slate-100 p-4 text-center">
-                    <h4 className="text-3xl font-black text-slate-900">
+                    <h4 className="text-xl font-black text-slate-900">
                       End-to-End
                     </h4>
 

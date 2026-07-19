@@ -599,6 +599,10 @@
   display: flex;
 }
 
+.mobile-link .active{
+  color:white;
+}
+
 /* Light */
 
 .navbar.light .mobile-menu {
@@ -637,9 +641,9 @@
   transition: .25s;
 }
 
-.navbar.light .mobile-link {
+/* .navbar.light .mobile-link {
   color: #0f172a;
-}
+} */
 
 .navbar.dark .mobile-link {
   color: #fff;
