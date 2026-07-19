@@ -340,7 +340,7 @@ export default async function ServicePage({ params }) {
 
     <div className="relative mx-auto max-w-7xl px-6">
       <div className="grid gap-16 lg:grid-cols-12">
-        {/* Left */}
+        {/* Left left */}
 
         <motion.div
           initial={{ opacity: 0, x: -60 }}
