@@ -162,12 +162,12 @@ export default function Navbar({ theme = "light" }) {
             >
               <Image
                 src="/logo.jpeg"
-                alt="Wattworks Energies"
+                alt="WattWorks Energies"
                 width={52}
                 height={52}
               />
               <div>
-                <h2>Wattworks</h2>
+                <h2>WattWorks</h2>
                 <span>ENERGIES</span>
               </div>
             </Link>
@@ -244,12 +244,12 @@ export default function Navbar({ theme = "light" }) {
             <Link href="/" className="logo">
               <Image
                 src="/logo.jpeg"
-                alt="Wattworks Energies"
+                alt="WattWorks Energies"
                 width={55}
                 height={55}
               />
               <div className="logoTxt">
-                <span className="logo-title">Wattworks</span>
+                <span className="logo-title">WattWorks</span>
                 <span className="logo-sub">ENERGIES</span>
               </div>
             </Link>

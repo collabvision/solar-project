@@ -13,10 +13,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "@/app/(component)/Navbar";
 import Footer from "@/app/(component)/Footer";
+import { UserRound } from "lucide-react";
 // import "./animateHome.css";
 
 /* =========================================================
-   Wattworks Energies — Solar Landing Page (Next.js / JSX)
+   WattWorks Energies — Solar Landing Page (Next.js / JSX)
    Cinematic GSAP edition.
 
    Layered on top of the original structure/content:
@@ -175,8 +176,8 @@ const PROJECTS = [
   {
     status: "Completed",
     dotColor: "#10b981",
-    img: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=500&auto=format&fit=crop",
-    name: "120 KW RCC Rooftop Installation",
+    img: "./others/RCC_Floor_Mounted_Structure-5KW.jpeg",
+    name: "RCC Floor Mounted Structure - 5 KW",
     location: "Satara, Maharashtra",
     note: "Live & Generating",
     noteColor: "#3b82f6",
@@ -184,8 +185,8 @@ const PROJECTS = [
   {
     status: "Completed",
     dotColor: "#64748b",
-    img: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=500&auto=format&fit=crop",
-    name: "100 KW Industrial Roof-Mount Plant",
+    img: "./others/RCC_Roof_Elevated_Structure-70_KW.jpeg",
+    name: "RCC Roof Elevated Structure - 70 KW",
     location: "Chakan, Maharashtra",
     note: "Live & Generating",
     noteColor: "#64748b",
@@ -193,8 +194,8 @@ const PROJECTS = [
   {
     status: "Completed",
     dotColor: "#10b981",
-    img: "https://images.unsplash.com/photo-1591293836301-bd0a64e3d055?q=80&w=500&auto=format&fit=crop",
-    name: "40 KW Elevated Apartment Structure",
+    img: "./others/Residential_Rooftop_Structure-3_KW.jpeg",
+    name: "Residential Rooftop Structure - 3 KW",
     location: "Pune, Maharashtra",
     note: "Live & Generating",
     noteColor: "#3b82f6",
@@ -202,38 +203,11 @@ const PROJECTS = [
   {
     status: "Completed",
     dotColor: "#10b981",
-    img: "https://images.unsplash.com/photo-1545209463-e2826691602c?q=80&w=500&auto=format&fit=crop",
-    name: "48 KW Solar Carport & Bus Port",
-    location: "Belagavi, Karnataka",
+    img: "./others/rooftop5.jpeg",
+    name: "RCC Rooftop Satara - 210 KW",
+    location: "Khatav, Satara",
     note: "Live & Generating",
     noteColor: "#3b82f6",
-  },
-  {
-    status: "Ongoing",
-    dotColor: "#10b981",
-    img: "https://images.unsplash.com/photo-1592833167665-08e9d1f0bb5d?q=80&w=500&auto=format&fit=crop",
-    name: "Residential Rooftop Solar Installations",
-    location: "Maharashtra, Karnataka & Goa",
-    note: "Multiple Sites",
-    noteColor: "#3b82f6",
-  },
-  {
-    status: "Advisory",
-    dotColor: "#64748b",
-    img: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=500&auto=format&fit=crop",
-    name: "Solar Park Consultancy & DPR Development",
-    location: "Maharashtra, Karnataka & Goa",
-    note: "Consultancy",
-    noteColor: "#64748b",
-  },
-  {
-    status: "Advisory",
-    dotColor: "#64748b",
-    img: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=500&auto=format&fit=crop",
-    name: "Open Access Renewable Energy Feasibility Studies",
-    location: "Maharashtra, Karnataka & Goa",
-    note: "Consultancy",
-    noteColor: "#64748b",
   },
 ];
 
@@ -267,7 +241,7 @@ const REVIEWS = [
     quote:
       "With our dedication and expertise in solar energy, we strive to deliver systems that are not just installations, but a lasting commitment to lower bills and a greener future.",
     name: "Aniket Deshmukh",
-    role: "Project Manager, Wattworks Energies",
+    role: "Project Manager, WattWorks Energies",
   },
   {
     avatar:
@@ -279,7 +253,7 @@ const REVIEWS = [
   },
 ];
 
-export default function WattworksLandingPage() {
+export default function WattWorksLandingPage() {
   const [activeTab, setActiveTab] = useState("rooftop");
   const [openFaq, setOpenFaq] = useState(0);
   const [reviewIndex, setReviewIndex] = useState(0);
@@ -318,14 +292,22 @@ export default function WattworksLandingPage() {
         .from(
           ".hero-content .cta-pill-btn",
           { y: 18, opacity: 0, scale: 0.92, duration: 0.7 },
-          "-=0.5"
+          "-=0.5",
         )
-        .from(".hero-floating-left", { x: -50, opacity: 0, duration: 0.8 }, "-=0.55")
-        .from(".hero-floating-bottom-bar", { y: 24, opacity: 0, duration: 0.7 }, "-=0.5")
+        .from(
+          ".hero-floating-left",
+          { x: -50, opacity: 0, duration: 0.8 },
+          "-=0.55",
+        )
+        .from(
+          ".hero-floating-bottom-bar",
+          { y: 24, opacity: 0, duration: 0.7 },
+          "-=0.5",
+        )
         .from(
           ".social-vertical-dock .social-pill",
           { x: 34, opacity: 0, stagger: 0.08, duration: 0.6 },
-          "-=0.5"
+          "-=0.5",
         );
 
       gsap.to(".hero-canvas", {
@@ -385,7 +367,7 @@ export default function WattworksLandingPage() {
               start: "top 88%",
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
       });
 
@@ -409,7 +391,7 @@ export default function WattworksLandingPage() {
             stagger: 0.08,
             ease: "power3.out",
             scrollTrigger: { trigger: grid, start: "top 85%" },
-          }
+          },
         );
       });
     }, pageRef);
@@ -422,8 +404,14 @@ export default function WattworksLandingPage() {
       const cards = gsap.utils.toArray(".tilt-card");
       const cleanups = [];
       cards.forEach((card) => {
-        const rx = gsap.quickTo(card, "rotationX", { duration: 0.5, ease: "power3" });
-        const ry = gsap.quickTo(card, "rotationY", { duration: 0.5, ease: "power3" });
+        const rx = gsap.quickTo(card, "rotationX", {
+          duration: 0.5,
+          ease: "power3",
+        });
+        const ry = gsap.quickTo(card, "rotationY", {
+          duration: 0.5,
+          ease: "power3",
+        });
         const lift = gsap.quickTo(card, "z", { duration: 0.5, ease: "power3" });
         const onMove = (e) => {
           const rect = card.getBoundingClientRect();
@@ -453,7 +441,9 @@ export default function WattworksLandingPage() {
   /* ---------- Magnetic CTAs & tabs ---------- */
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const magnets = gsap.utils.toArray(".cta-pill-btn, .btn-black, .tab-trigger");
+      const magnets = gsap.utils.toArray(
+        ".cta-pill-btn, .btn-black, .tab-trigger",
+      );
       const cleanups = [];
       magnets.forEach((btn) => {
         const mx = gsap.quickTo(btn, "x", { duration: 0.4, ease: "power3" });
@@ -507,7 +497,12 @@ export default function WattworksLandingPage() {
           end: "bottom top",
           onUpdate: (self) => {
             const skew = gsap.utils.clamp(-10, 10, self.getVelocity() / -280);
-            gsap.to(track, { skewX: skew, duration: 0.5, ease: "power3.out", overwrite: true });
+            gsap.to(track, {
+              skewX: skew,
+              duration: 0.5,
+              ease: "power3.out",
+              overwrite: true,
+            });
           },
         });
       });
@@ -545,7 +540,7 @@ export default function WattworksLandingPage() {
               duration: 0.7,
               ease: "back.out(2)",
               scrollTrigger: { trigger: el, start: "top 85%" },
-            }
+            },
           );
         }
       });
@@ -562,16 +557,25 @@ export default function WattworksLandingPage() {
         gsap.fromTo(
           el,
           { autoAlpha: 0, scale: 0.94, y: 26 },
-          { autoAlpha: 1, scale: 1, y: 0, duration: 0.8, ease: "power3.out" }
+          { autoAlpha: 1, scale: 1, y: 0, duration: 0.8, ease: "power3.out" },
         );
       } else {
-        gsap.to(el, { autoAlpha: 0, scale: 0.94, y: -14, duration: 0.5, ease: "power2.in" });
+        gsap.to(el, {
+          autoAlpha: 0,
+          scale: 0.94,
+          y: -14,
+          duration: 0.5,
+          ease: "power2.in",
+        });
       }
     });
   }, [reviewIndex]);
 
   useEffect(() => {
-    const t = setInterval(() => setReviewIndex((i) => (i + 1) % REVIEWS.length), 6000);
+    const t = setInterval(
+      () => setReviewIndex((i) => (i + 1) % REVIEWS.length),
+      6000,
+    );
     return () => clearInterval(t);
   }, []);
 
@@ -596,18 +600,22 @@ export default function WattworksLandingPage() {
     gsap.fromTo(
       deptContentRef.current,
       { opacity: 0, y: 24 },
-      { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }
+      { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" },
     );
     gsap.fromTo(
       deptImageRef.current,
-      { opacity: 0, scale: 1.06, clipPath: "inset(10% 10% 10% 10% round 24px)" },
+      {
+        opacity: 0,
+        scale: 1.06,
+        clipPath: "inset(10% 10% 10% 10% round 24px)",
+      },
       {
         opacity: 1,
         scale: 1,
         clipPath: "inset(0% 0% 0% 0% round 24px)",
         duration: 0.75,
         ease: "power3.out",
-      }
+      },
     );
   }, [activeTab]);
 
@@ -641,20 +649,17 @@ export default function WattworksLandingPage() {
 
         <div className="hero-bottom">
           <div className="hero-floating-left">
-            <div className="team-avatars">
-              <img
-                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=150&auto=format&fit=crop"
-                alt="Wattworks solar engineer"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=150&auto=format&fit=crop"
-                alt="Wattworks site engineer"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=150&auto=format&fit=crop"
-                alt="Wattworks project manager"
-              />
-            </div>
+            {/* <div className="team-avatars">
+              <div className="user-avatar">
+                <UserRound size={22} />
+              </div>
+              <div className="user-avatar">
+                <UserRound size={22} />
+              </div>
+              <div className="user-avatar">
+                <UserRound size={22} />
+              </div>
+            </div> */}
             <p>
               Our experienced EPC team pairs technical expertise with dedicated
               after-sales support, since 2020.
@@ -663,7 +668,7 @@ export default function WattworksLandingPage() {
 
           {/* <div className="hero-floating-bottom-bar">
             <span style={{ color: "var(--accent)" }}>●</span> LEADING SOLAR
-            EXCELLENCE WITH WATTWORKS
+            EXCELLENCE WITH WattWorks
           </div> */}
 
           <div className="social-vertical-dock">
@@ -682,27 +687,47 @@ export default function WattworksLandingPage() {
 
       {/* ===================== ABOUT / INTRO ===================== */}
       <section className="intro-section" id="about">
-        <div className="ambient-orb" style={{ top: "5%", left: "4%", width: 320, height: 320, background: "radial-gradient(circle, rgba(30,136,199,0.22), transparent 70%)" }} />
-        <div className="ambient-orb" style={{ bottom: "0%", right: "6%", width: 260, height: 260, background: "radial-gradient(circle, rgba(16,185,129,0.18), transparent 70%)" }} />
+        <div
+          className="ambient-orb"
+          style={{
+            top: "5%",
+            left: "4%",
+            width: 320,
+            height: 320,
+            background:
+              "radial-gradient(circle, rgba(30,136,199,0.22), transparent 70%)",
+          }}
+        />
+        <div
+          className="ambient-orb"
+          style={{
+            bottom: "0%",
+            right: "6%",
+            width: 260,
+            height: 260,
+            background:
+              "radial-gradient(circle, rgba(16,185,129,0.18), transparent 70%)",
+          }}
+        />
         <div className="container">
           <div className="badge-center">
             <span className="badge-pill">Let's know us ➔</span>
           </div>
           <h2 className="large-headline reveal">
-            Explore Options, About Wattworks, Your Energy Savings, Our Priority
+            Explore Options, About WattWorks, Your Energy Savings, Our Priority
           </h2>
 
           <div className="split-grid-layout reveal">
             <div className="left-info-block">
               <span
-                className="badge-pill"
+                className=" text-4xl font-bold border border-gray-400 rounded-4xl p-4 "
                 style={{ marginBottom: 15, display: "inline-block" }}
               >
                 About Us
               </span>
               <h3>
-                Wattworks Energies Pvt. Ltd. is a trusted solar energy company
-                providing end-to-end solar power solutions since 2020.
+                WattWorks Energies Private Limited. is a trusted solar energy
+                company providing end-to-end solar power solutions since 2020.
               </h3>
               <p>
                 We deliver residential, commercial, industrial, institutional,
@@ -710,8 +735,8 @@ export default function WattworksLandingPage() {
                 Goa — reducing electricity costs and contributing to a greener
                 future.
               </p>
-              <a href="#services" className="btn-black">
-                Learn More{" "}
+              <a href="./about" className="btn-black">
+                About Us{" "}
                 <span
                   className="arrow-circle"
                   style={{
@@ -726,30 +751,25 @@ export default function WattworksLandingPage() {
 
             <div className="asym-card tilt-card">
               <img
-                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600&auto=format&fit=crop"
+                src="./others/rooftop2.jpeg"
                 alt="Rooftop solar installation"
               />
               <div className="card-overlay">
-                <span className="card-tag">Rooftop System</span>
+                <span className="card-tag text-black">Rooftop System</span>
                 <h4>
                   A versatile rooftop solution offering a wide range of solar
                   capacities
                 </h4>
-                <span className="card-arrow-btn">↗</span>
               </div>
             </div>
 
-            <div className="asym-card tilt-card" >
-              <img
-                src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=600&auto=format&fit=crop"
-                alt="Industrial solar plant"
-              />
+            <div className="asym-card tilt-card">
+              <img src="./others/rooftop5.jpeg" alt="Industrial solar plant" />
               <div className="card-overlay">
-                <span className="card-tag">Industrial Plant</span>
+                <span className="card-tag text-black">Industrial Plant</span>
                 <h4>
                   High-capacity systems built for factories and warehouses
                 </h4>
-                <span className="card-arrow-btn">↗</span>
               </div>
             </div>
           </div>
@@ -853,10 +873,7 @@ export default function WattworksLandingPage() {
 
           <div className="facility-gallery reveal">
             <div className="fac-card tilt-card">
-              <img
-                src="https://images.unsplash.com/photo-1559302995-f1d6e557a524?q=80&w=600&auto=format&fit=crop"
-                alt="Solar EPC site"
-              />
+              <img src="./others/ai_rooftop.jpeg" alt="Solar EPC site" />
               <div className="fac-overlay">
                 <span className="fac-tag">Solar EPC</span>
                 <div>
@@ -879,7 +896,7 @@ export default function WattworksLandingPage() {
 
             <div className="fac-card tilt-card">
               <img
-                src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=600&auto=format&fit=crop"
+                src="./others/rooftop3.jpeg"
                 alt="Ground mounted solar plant"
               />
               <div className="fac-overlay">
@@ -903,10 +920,7 @@ export default function WattworksLandingPage() {
             </div>
 
             <div className="fac-card tilt-card">
-              <img
-                src="https://images.unsplash.com/photo-1545209463-e2826691602c?q=80&w=600&auto=format&fit=crop"
-                alt="Solar carport"
-              />
+              <img src="./others/rooftop4.jpeg" alt="Solar carport" />
               <div className="fac-overlay">
                 <span className="fac-tag">Carports</span>
                 <div>
@@ -930,11 +944,11 @@ export default function WattworksLandingPage() {
         </div>
       </section>
 
-      {/* ===================== WHY CHOOSE WATTWORKS ===================== */}
+      {/* ===================== WHY CHOOSE WattWorks ===================== */}
       <section className="apart-section">
         <div className="container">
           <div className="badge-center">
-            <span className="badge-pill">Why Choose Wattworks Energies?</span>
+            <span className="badge-pill">Why Choose WattWorks Energies?</span>
           </div>
           <h2 className="large-headline reveal" style={{ fontSize: "2.4rem" }}>
             We combine technical expertise, premium-quality components, and
@@ -1016,7 +1030,7 @@ export default function WattworksLandingPage() {
                 >
                   {p.name}
                 </h4>
-                <p
+                {/* <p
                   style={{
                     color: "var(--text-muted)",
                     fontSize: "0.85rem",
@@ -1024,7 +1038,7 @@ export default function WattworksLandingPage() {
                   }}
                 >
                   {p.location}
-                </p>
+                </p> */}
                 <hr
                   style={{
                     border: 0,
@@ -1127,7 +1141,17 @@ export default function WattworksLandingPage() {
 
       {/* ===================== SERVICE SWITCHER ===================== */}
       <section className="dept-switcher-section">
-        <div className="ambient-orb" style={{ top: "8%", right: "6%", width: 300, height: 300, background: "radial-gradient(circle, rgba(245,158,11,0.16), transparent 70%)" }} />
+        <div
+          className="ambient-orb"
+          style={{
+            top: "8%",
+            right: "6%",
+            width: 300,
+            height: 300,
+            background:
+              "radial-gradient(circle, rgba(245,158,11,0.16), transparent 70%)",
+          }}
+        />
         <div className="container">
           <div className="badge-center">
             <span className="badge-pill">Solutions by Need</span>
@@ -1222,7 +1246,7 @@ export default function WattworksLandingPage() {
             <span className="badge-pill">Common Questions</span>
           </div>
           <h2 className="large-headline reveal">
-            Everything You Need To Know About Going Solar With Wattworks
+            Everything You Need To Know About Going Solar With WattWorks
           </h2>
 
           <div className="faq-accordion-wrapper reveal">
@@ -1252,8 +1276,28 @@ export default function WattworksLandingPage() {
 
       {/* ===================== MISSION / CLOSING CTA ===================== */}
       <section className="mission-section">
-        <div className="ambient-orb" style={{ top: "10%", left: "10%", width: 340, height: 340, background: "radial-gradient(circle, rgba(16,185,129,0.18), transparent 70%)" }} />
-        <div className="ambient-orb" style={{ bottom: "5%", right: "8%", width: 260, height: 260, background: "radial-gradient(circle, rgba(30,136,199,0.2), transparent 70%)" }} />
+        <div
+          className="ambient-orb"
+          style={{
+            top: "10%",
+            left: "10%",
+            width: 340,
+            height: 340,
+            background:
+              "radial-gradient(circle, rgba(16,185,129,0.18), transparent 70%)",
+          }}
+        />
+        <div
+          className="ambient-orb"
+          style={{
+            bottom: "5%",
+            right: "8%",
+            width: 260,
+            height: 260,
+            background:
+              "radial-gradient(circle, rgba(30,136,199,0.2), transparent 70%)",
+          }}
+        />
         <div className="container">
           <div className="badge-center">
             <span className="badge-pill">Our Mission</span>
@@ -1270,10 +1314,10 @@ export default function WattworksLandingPage() {
               lineHeight: 1.7,
             }}
           >
-            At Wattworks Energies Pvt. Ltd., we believe clean energy is not just
-            an investment — it is a commitment to a sustainable future. Our
-            mission is to help businesses and homeowners harness the power of
-            the sun through reliable, affordable, and high-performance solar
+            At WattWorks Energies Private Limited., we believe clean energy is
+            not just an investment — it is a commitment to a sustainable future.
+            Our mission is to help businesses and homeowners harness the power
+            of the sun through reliable, affordable, and high-performance solar
             solutions.
           </p>
           <p
@@ -1408,8 +1452,7 @@ export default function WattworksLandingPage() {
           border-radius: 32px;
           background:
             linear-gradient(rgba(8, 27, 39, 0.55), rgba(8, 27, 39, 0.45)),
-            url("https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2600&auto=format&fit=crop")
-              center/cover no-repeat;
+            url("./others/rooftop3.jpeg") center/cover no-repeat;
         }
 
         .hero-spotlight {
@@ -2147,7 +2190,9 @@ export default function WattworksLandingPage() {
           font-size: 0.9rem;
           font-weight: 600;
           cursor: pointer;
-          transition: background 0.4s var(--curve-preset), color 0.4s var(--curve-preset),
+          transition:
+            background 0.4s var(--curve-preset),
+            color 0.4s var(--curve-preset),
             border-color 0.4s var(--curve-preset);
         }
         .tab-trigger.active,
@@ -2212,7 +2257,9 @@ export default function WattworksLandingPage() {
           align-items: center;
           justify-content: center;
           font-size: 0.8rem;
-          transition: transform 0.4s var(--curve-preset), background 0.4s var(--curve-preset);
+          transition:
+            transform 0.4s var(--curve-preset),
+            background 0.4s var(--curve-preset);
         }
         .faq-item.open .faq-icon-circle {
           transform: rotate(180deg);
@@ -2247,155 +2294,149 @@ export default function WattworksLandingPage() {
             font-size: 14px;
           }
         }
-          /* ==========================
+        /* ==========================
    ABOUT SECTION MOBILE
 ========================== */
 
-@media (max-width:1024px){
+        @media (max-width: 1024px) {
+          .split-grid-layout {
+            grid-template-columns: 1fr;
+            gap: 28px;
+            align-items: stretch;
+          }
 
-    .split-grid-layout{
-        grid-template-columns:1fr;
-        gap:28px;
-        align-items:stretch;
-    }
+          .left-info-block {
+            order: 1;
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+          }
 
-    .left-info-block{
-        order:1;
-        text-align:center;
-        max-width:700px;
-        margin:auto;
-    }
+          .left-info-block h3 {
+            font-size: 2rem;
+            line-height: 1.3;
+          }
 
-    .left-info-block h3{
-        font-size:2rem;
-        line-height:1.3;
-    }
+          .left-info-block p {
+            margin: 20px auto 32px;
+            max-width: 650px;
+          }
 
-    .left-info-block p{
-        margin:20px auto 32px;
-        max-width:650px;
-    }
+          .left-info-block .btn-black {
+            justify-content: center;
+          }
 
-    .left-info-block .btn-black{
-        justify-content:center;
-    }
+          .asym-card {
+            order: 2;
+            width: 100%;
+            height: 420px;
+          }
 
-    .asym-card{
-        order:2;
-        width:100%;
-        height:420px;
-    }
+          .second-card {
+            order: 3;
+            margin-top: 0 !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .intro-section {
+            padding: 70px 0;
+          }
 
-    .second-card{
-        order:3;
-        margin-top:0 !important;
-    }
+          .split-grid-layout {
+            gap: 22px;
+          }
 
-}
-    @media (max-width:768px){
+          .left-info-block {
+            text-align: left;
+          }
 
-    .intro-section{
-        padding:70px 0;
-    }
+          .left-info-block h3 {
+            font-size: 1.7rem;
+            line-height: 1.35;
+          }
 
-    .split-grid-layout{
-        gap:22px;
-    }
+          .left-info-block p {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            margin: 18px 0 28px;
+          }
 
-    .left-info-block{
-        text-align:left;
-    }
+          .left-info-block .btn-black {
+            width: 100%;
+            justify-content: center;
+          }
 
-    .left-info-block h3{
-        font-size:1.7rem;
-        line-height:1.35;
-    }
+          .asym-card {
+            height: 340px;
+            border-radius: 24px;
+          }
 
-    .left-info-block p{
-        font-size:.98rem;
-        line-height:1.8;
-        margin:18px 0 28px;
-    }
+          .card-overlay {
+            padding: 22px;
+          }
 
-    .left-info-block .btn-black{
-        width:100%;
-        justify-content:center;
-    }
+          .card-tag {
+            top: 16px;
+            left: 16px;
+            font-size: 0.72rem;
+            padding: 6px 14px;
+          }
 
-    .asym-card{
-        height:340px;
-        border-radius:24px;
-    }
+          .card-overlay h4 {
+            font-size: 1.15rem;
+            line-height: 1.45;
+            max-width: 90%;
+          }
 
-    .card-overlay{
-        padding:22px;
-    }
+          .card-arrow-btn {
+            width: 42px;
+            height: 42px;
+            right: 18px;
+            bottom: 18px;
+          }
+        }
+        @media (max-width: 480px) {
+          .container {
+            padding: 0 18px;
+          }
 
-    .card-tag{
-        top:16px;
-        left:16px;
-        font-size:.72rem;
-        padding:6px 14px;
-    }
+          .large-headline {
+            font-size: 2rem;
+            margin-bottom: 50px;
+          }
 
-    .card-overlay h4{
-        font-size:1.15rem;
-        line-height:1.45;
-        max-width:90%;
-    }
+          .left-info-block h3 {
+            font-size: 1.45rem;
+          }
 
-    .card-arrow-btn{
-        width:42px;
-        height:42px;
-        right:18px;
-        bottom:18px;
-    }
+          .left-info-block p {
+            font-size: 0.92rem;
+          }
 
-}
-    @media (max-width:480px){
+          .asym-card {
+            height: 280px;
+            border-radius: 20px;
+          }
 
-    .container{
-        padding:0 18px;
-    }
+          .card-overlay {
+            padding: 18px;
+          }
 
-    .large-headline{
-        font-size:2rem;
-        margin-bottom:50px;
-    }
+          .card-overlay h4 {
+            font-size: 1rem;
+            line-height: 1.5;
+          }
 
-    .left-info-block h3{
-        font-size:1.45rem;
-    }
+          .card-tag {
+            font-size: 0.68rem;
+          }
 
-    .left-info-block p{
-        font-size:.92rem;
-    }
-
-    .asym-card{
-        height:280px;
-        border-radius:20px;
-    }
-
-    .card-overlay{
-        padding:18px;
-    }
-
-    .card-overlay h4{
-        font-size:1rem;
-        line-height:1.5;
-    }
-
-    .card-tag{
-        font-size:.68rem;
-    }
-
-    .card-arrow-btn{
-        width:38px;
-        height:38px;
-        font-size:.9rem;
-    }
-
-}
+          .card-arrow-btn {
+            width: 38px;
+            height: 38px;
+            font-size: 0.9rem;
+          }
+        }
       `}</style>
     </div>
   );

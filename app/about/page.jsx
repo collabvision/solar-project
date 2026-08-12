@@ -76,7 +76,7 @@ export default function AboutHero() {
           {/* Heading */}
           <div className="mb-10 text-center sm:mb-14">
             <span className="inline-flex rounded-full border border-white/40 bg-white/70 px-4 py-2 text-xs font-semibold shadow-lg backdrop-blur-xl sm:px-5 sm:text-sm">
-              ABOUT WATTWORKS ENERGIES
+              ABOUT WattWorks ENERGIES
             </span>
 
             <h2 className="mt-6 text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl">
@@ -86,7 +86,7 @@ export default function AboutHero() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
-              Wattworks Energies Pvt. Ltd. is a leading renewable energy company
+              WattWorks Energies Private Limited. is a leading renewable energy company
               dedicated to helping homes, businesses, industries and
               institutions transition to clean, affordable and sustainable
               power. Since 2020, we have been delivering reliable solar
@@ -113,7 +113,7 @@ export default function AboutHero() {
                   Solutions.
                 </h1>
                 <p className="mt-6 text-base leading-7 text-slate-500 sm:leading-8">
-                  Earlier known as Wattworks Energies Pvt. Ltd., we specialize
+                  Earlier known as WattWorks Energies Private Limited., we specialize
                   in Engineering, Procurement, Installation, Commissioning,
                   Project Management Consultancy, Engineering Consultancy,
                   Energy Audits, Transformer & Substation Installation, Solar
@@ -241,7 +241,7 @@ export default function AboutHero() {
                 </h2>
 
                 <p className="mt-5 leading-7 text-slate-500 sm:leading-8">
-                  At Wattworks Energies, we believe solar energy is one of the
+                  At WattWorks Energies, we believe solar energy is one of the
                   most effective ways to address rising energy costs and
                   environmental challenges. Our experienced engineering team
                   designs, procures, installs, commissions, operates and
@@ -369,7 +369,7 @@ export default function AboutHero() {
 
               <div className="mt-8 space-y-6 sm:mt-10 sm:space-y-7">
                 <p className="text-base leading-7 text-slate-500 sm:text-lg sm:leading-9">
-                  At Wattworks Energies, we believe that solar energy is one of
+                  At WattWorks Energies, we believe that solar energy is one of
                   the most effective ways to address rising energy costs and
                   environmental challenges. Our team brings together technical
                   expertise, industry knowledge, and a customer-first approach
@@ -471,7 +471,7 @@ export default function AboutHero() {
             <h2 className="mt-6 text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl">
               Meet The Experts
               <br />
-              Behind Wattworks
+              Behind WattWorks
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
@@ -895,13 +895,13 @@ export default function AboutHero() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center sm:mb-16 lg:mb-20">
             <span className="inline-flex rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold shadow sm:px-5 sm:text-sm">
-              WHY CHOOSE WATTWORKS ENERGIES
+              WHY CHOOSE WattWorks ENERGIES
             </span>
 
             <h2 className="mt-6 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl">
               Why Choose
               <br />
-              Wattworks Energies?
+              WattWorks Energies?
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
@@ -1056,7 +1056,7 @@ export default function AboutHero() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-4xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
-              Over the years, Wattworks Energies has successfully executed and
+              Over the years, WattWorks Energies has successfully executed and
               supported a wide range of solar projects across residential,
               commercial, industrial, educational, and institutional sectors.
             </p>
@@ -1237,7 +1237,7 @@ export default function AboutHero() {
             </h2>
 
             <p className="mt-6 text-base leading-7 text-white/80 sm:mt-8 sm:text-lg sm:leading-9">
-              At Wattworks Energies, we believe that our responsibility extends
+              At WattWorks Energies, we believe that our responsibility extends
               beyond project completion. Through dedicated after-sales service,
               annual maintenance programs, performance monitoring, and technical
               support, we ensure that every solar plant continues to deliver
@@ -1264,7 +1264,7 @@ export default function AboutHero() {
             <p className="mt-6 text-base leading-7 text-white/80 sm:mt-8 sm:text-lg sm:leading-9">
               Whether you are a homeowner looking to reduce electricity bills, a
               business seeking operational savings, or an industry planning a
-              large-scale renewable energy investment, Wattworks Energies Pvt.
+              large-scale renewable energy investment, WattWorks Energies Pvt.
               Ltd. is your trusted partner for reliable solar power solutions.
             </p>
 

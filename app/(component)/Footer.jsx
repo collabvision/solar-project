@@ -7,14 +7,14 @@ export default function Footer() {
     <>
       <footer className="footer">
         <div className="container">
-          <h2 className="footer-title">WATTWORKS</h2>
+          <h2 className="footer-title">WattWorks</h2>
 
           <div className="footer-grid">
             {/* Company */}
             <div>
               <h3>
                 <Link href="/" className="footer-company-link">
-                  Wattworks Energies
+                  WattWorks Energies
                 </Link>
               </h3>
               <p>
@@ -25,8 +25,8 @@ export default function Footer() {
               <div className="footer-contact">
                 <a href="tel:+919845853002">+91 98458 53002</a>
 
-                <a href="mailto:biz.wattworks@gmail.com">
-                  biz.wattworks@gmail.com
+                <a href="mailto:biz.WattWorks@gmail.com">
+                  biz.WattWorks@gmail.com
                 </a>
 
                 <span>Maharashtra • Karnataka • Goa</span>
@@ -91,8 +91,6 @@ export default function Footer() {
               <h4>Support</h4>
 
               <ul>
-         
-
                 <li>
                   <Link href="/contact">Get Quote</Link>
                 </li>
@@ -106,8 +104,8 @@ export default function Footer() {
 
           <div className="footer-bottom">
             <p>
-              © {new Date().getFullYear()} Wattworks Energies Pvt. Ltd. All
-              Rights Reserved.
+              © {new Date().getFullYear()} WattWorks Energies Private Limited.
+              All Rights Reserved.
             </p>
 
             <div className="footer-links">

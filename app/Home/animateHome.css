@@ -419,3 +419,22 @@ transform:none;
 }
 
 }
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: white;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  margin-right: -10px;
+  stroke: white
+}
+
+.user-avatar .lucide-user-round{
+    stroke:white;
+}

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -235,7 +235,7 @@ export default async function ServicePage({ params }) {
               </a>
 
               <a
-                href="mailto:biz.wattworks@gmail.com"
+                href="mailto:biz.WattWorks@gmail.com"
                 className="inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-900 transition hover:border-slate-600"
               >
                 <Mail size={18} />
@@ -284,8 +284,6 @@ export default async function ServicePage({ params }) {
                   Professional renewable energy solutions designed to maximize
                   performance, efficiency and long-term value.
                 </p>
-
-               
               </div>
             ))}
           </div>
@@ -294,161 +292,159 @@ export default async function ServicePage({ params }) {
       {/* =====================================
               CONTENT SECTIONS
       ===================================== */}
-  {service.content.map((section, index) => (
-  <motion.section
-    key={section.title}
-    initial={{ opacity: 0, y: 80 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.15 }}
-    transition={{
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
-    }}
-    className={`relative overflow-hidden py-20 ${
-      index % 2 === 0
-        ? "bg-white"
-        : "bg-gradient-to-br from-slate-50 via-white to-blue-50"
-    }`}
-  >
-    {/* Background */}
-
-    <motion.div
-      animate={{
-        y: [0, -25, 0],
-        x: [0, 20, 0],
-      }}
-      transition={{
-        repeat: Infinity,
-        duration: 14,
-        ease: "easeInOut",
-      }}
-      className="absolute -left-24 top-0 h-80 w-80 rounded-full bg-slate-200/20 blur-3xl"
-    />
-
-    <motion.div
-      animate={{
-        y: [0, 20, 0],
-        x: [0, -25, 0],
-      }}
-      transition={{
-        repeat: Infinity,
-        duration: 18,
-        ease: "easeInOut",
-      }}
-      className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-200/20 blur-3xl"
-    />
-
-    <div className="relative mx-auto max-w-7xl px-6">
-      <div className="grid gap-16 lg:grid-cols-12">
-        {/* Left left */}
-
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="lg:col-span-4"
+      {service.content.map((section, index) => (
+        <motion.section
+          key={section.title}
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className={`relative overflow-hidden py-20 ${
+            index % 2 === 0
+              ? "bg-white"
+              : "bg-gradient-to-br from-slate-50 via-white to-blue-50"
+          }`}
         >
-          <span className="rounded-full bg-slate-100 px-5 py-2 text-sm font-semibold text-slate-700">
-            Section {String(index + 1).padStart(2, "0")}
-          </span>
+          {/* Background */}
 
-          <h2 className="mt-6 text-4xl font-black leading-tight text-slate-900">
-            {section.title}
-          </h2>
+          <motion.div
+            animate={{
+              y: [0, -25, 0],
+              x: [0, 20, 0],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 14,
+              ease: "easeInOut",
+            }}
+            className="absolute -left-24 top-0 h-80 w-80 rounded-full bg-slate-200/20 blur-3xl"
+          />
 
-          <div className="mt-8 h-1 w-24 rounded-full bg-gradient-to-r from-slate-500 to-slate-500" />
+          <motion.div
+            animate={{
+              y: [0, 20, 0],
+              x: [0, -25, 0],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 18,
+              ease: "easeInOut",
+            }}
+            className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-200/20 blur-3xl"
+          />
 
-          <p className="mt-8 text-lg leading-9 text-slate-600">
-            {section.description}
-          </p>
+          <div className="relative mx-auto max-w-7xl px-6">
+            <div className="grid gap-16 lg:grid-cols-12">
+              {/* Left left */}
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="rounded-full bg-slate-600 px-7 py-4 font-semibold text-white transition-all duration-500 hover:-translate-y-1 hover:bg-slate-700 hover:shadow-xl"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-4"
+              >
+                <span className="rounded-full bg-slate-100 px-5 py-2 text-sm font-semibold text-slate-700">
+                  Section {String(index + 1).padStart(2, "0")}
+                </span>
 
-        {/* Right */}
+                <h2 className="mt-6 text-4xl font-black leading-tight text-slate-900">
+                  {section.title}
+                </h2>
 
-        <div className="space-y-10 lg:col-span-8">
-          {section.groups.map((group, groupIndex) => (
-            <motion.div
-              key={group.title}
-              initial={{
-                opacity: 0,
-                y: 40,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                delay: groupIndex * 0.12,
-                duration: 0.6,
-              }}
-            >
-              {/* Title */}
+                <div className="mt-8 h-1 w-24 rounded-full bg-gradient-to-r from-slate-500 to-slate-500" />
 
-              <div className="mb-8 flex items-center gap-4">
-                <div className="h-12 w-2 rounded-full bg-gradient-to-b from-slate-500 to-slate-500" />
+                <p className="mt-8 text-lg leading-9 text-slate-600">
+                  {section.description}
+                </p>
 
-                <h3 className="text-2xl font-black text-slate-900">
-                  {group.title}
-                </h3>
-              </div>
+                <div className="mt-10 flex flex-wrap gap-4">
+                  <Link
+                    href="/contact"
+                    className="rounded-full bg-slate-600 px-7 py-4 font-semibold text-white transition-all duration-500 hover:-translate-y-1 hover:bg-slate-700 hover:shadow-xl"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </motion.div>
 
-              {/* Items */}
+              {/* Right */}
 
-              <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {group.items.map((item, itemIndex) => (
+              <div className="space-y-10 lg:col-span-8">
+                {section.groups.map((group, groupIndex) => (
                   <motion.div
-                    key={item}
+                    key={group.title}
                     initial={{
                       opacity: 0,
-                      scale: 0.92,
+                      y: 40,
                     }}
                     whileInView={{
                       opacity: 1,
-                      scale: 1,
+                      y: 0,
                     }}
                     viewport={{
                       once: true,
                     }}
                     transition={{
-                      delay: itemIndex * 0.05,
-                      duration: 0.45,
+                      delay: groupIndex * 0.12,
+                      duration: 0.6,
                     }}
-                    whileHover={{
-                      y: -8,
-                      scale: 1.03,
-                    }}
-                    className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-500 hover:border-slate-300 hover:shadow-2xl"
                   >
-                    <div className="flex items-start gap-5">
-                      <div className="mt-2 h-3 w-3 rounded-full bg-gradient-to-r from-slate-500 to-slate-500" />
+                    {/* Title */}
 
-                      <p className="leading-8 text-slate-700">
-                        {item}
-                      </p>
+                    <div className="mb-8 flex items-center gap-4">
+                      <div className="h-12 w-2 rounded-full bg-gradient-to-b from-slate-500 to-slate-500" />
+
+                      <h3 className="text-2xl font-black text-slate-900">
+                        {group.title}
+                      </h3>
+                    </div>
+
+                    {/* Items */}
+
+                    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                      {group.items.map((item, itemIndex) => (
+                        <motion.div
+                          key={item}
+                          initial={{
+                            opacity: 0,
+                            scale: 0.92,
+                          }}
+                          whileInView={{
+                            opacity: 1,
+                            scale: 1,
+                          }}
+                          viewport={{
+                            once: true,
+                          }}
+                          transition={{
+                            delay: itemIndex * 0.05,
+                            duration: 0.45,
+                          }}
+                          whileHover={{
+                            y: -8,
+                            scale: 1.03,
+                          }}
+                          className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-500 hover:border-slate-300 hover:shadow-2xl"
+                        >
+                          <div className="flex items-start gap-5">
+                            <div className="mt-2 h-3 w-3 rounded-full bg-gradient-to-r from-slate-500 to-slate-500" />
+
+                            <p className="leading-8 text-slate-700">{item}</p>
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </motion.section>
-))}
+            </div>
+          </div>
+        </motion.section>
+      ))}
       {/* =====================================
               PROCESS
       ===================================== */}
@@ -697,8 +693,6 @@ export default async function ServicePage({ params }) {
                 href={`/services/${item.slug}`}
                 className="group overflow-hidden rounded-[34px] border border-slate-200 bg-white shadow-lg transition duration-300 hover:-translate-y-3 hover:shadow-2xl"
               >
-             
-
                 <div className="p-8">
                   <h3 className="text-2xl font-black text-slate-900 transition group-hover:text-slate-700">
                     {item.hero.title}

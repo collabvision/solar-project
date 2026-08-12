@@ -373,7 +373,7 @@ export const services = [
 
       phone: "+91 9845853002",
 
-      email: "biz.wattworks@gmail.com",
+      email: "biz.WattWorks@gmail.com",
 
       button: "Request Free Consultation",
     },
@@ -799,7 +799,7 @@ export const services = [
 
       phone: "+91 9845853002",
 
-      email: "biz.wattworks@gmail.com",
+      email: "biz.WattWorks@gmail.com",
 
       button: "Request EV Charging Consultation",
     },
@@ -1198,7 +1198,7 @@ export const services = [
 
       phone: "+91 9845853002",
 
-      email: "biz.wattworks@gmail.com",
+      email: "biz.WattWorks@gmail.com",
 
       button: "Request Wind Energy Consultation",
     },
@@ -1635,7 +1635,7 @@ export const services = [
 
       phone: "+91 9845853002",
 
-      email: "biz.wattworks@gmail.com",
+      email: "biz.WattWorks@gmail.com",
 
       button: "Get a Free Consultation",
     },
@@ -2047,7 +2047,7 @@ export const services = [
 
       phone: "+91 9845853002",
 
-      email: "biz.wattworks@gmail.com",
+      email: "biz.WattWorks@gmail.com",
 
       button: "Request an Energy Audit",
     },
@@ -2439,7 +2439,7 @@ export const services = [
 
       phone: "+91 9845853002",
 
-      email: "biz.wattworks@gmail.com",
+      email: "biz.WattWorks@gmail.com",
 
       button: "Get Approval Assistance",
     },
@@ -2868,7 +2868,7 @@ export const services = [
 
       phone: "+91 9845853002",
 
-      email: "biz.wattworks@gmail.com",
+      email: "biz.WattWorks@gmail.com",
 
       button: "Explore Financing Options",
     },

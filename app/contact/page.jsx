@@ -39,26 +39,23 @@ const page = () => {
       service: form.service,
       message: form.message,
     };
-      const id = process.env.NEXT_PUBLIC_VISION9_LEADSHEET_APPSCRIPT_API_ID;
-      console.log(
-        "click form :" +
-          id +
-          `https://script.google.com/macros/s/${process.env.NEXT_PUBLIC_VISION9_LEADSHEET_APPSCRIPT_API_ID}/exec`,
-      );
+    const id = process.env.NEXT_PUBLIC_VISION9_LEADSHEET_APPSCRIPT_API_ID;
+    console.log(
+      "click form :" +
+        id +
+        `https://script.google.com/macros/s/${process.env.NEXT_PUBLIC_VISION9_LEADSHEET_APPSCRIPT_API_ID}/exec`,
+    );
     try {
-         const res = await fetch(`https://script.google.com/macros/s/${id}/exec`, {
-
-    method: "POST",
+      const res = await fetch(`https://script.google.com/macros/s/${id}/exec`, {
+        method: "POST",
         headers: {
           // Keep this as text/plain to avoid complex CORS pre-flight checks
           "Content-Type": "text/plain;charset=utf-8",
         },
-    body: JSON.stringify(form),
-  }
-);
+        body: JSON.stringify(form),
+      });
 
-const data = await res.json();
-
+      const data = await res.json();
 
       if (data.success) {
         alert("Submitted Successfully");
@@ -369,7 +366,7 @@ const data = await res.json();
                     <p className="text-sm text-slate-500">Email</p>
 
                     <h4 className="font-semibold break-all">
-                      biz.wattworks@gmail.com
+                      biz.WattWorks@gmail.com
                     </h4>
                   </div>
                 </div>

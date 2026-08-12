@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata = {
-  title: "Solar Services | WattWorks Energies Pvt. Ltd.",
+  title: "Solar Services | WattWorks Energies Private Limited.",
   description:
     "Explore WattWorks Energies' comprehensive solar services including Solar EPC, Rooftop Solar Systems, Ground Mounted Solar Plants, Solar Consultancy, Energy Audits, EV Charging Infrastructure, Operations & Maintenance, Solar Financing, and Renewable Energy Solutions across Karnataka, Maharashtra, and Goa.",
   keywords: [
@@ -475,10 +475,7 @@ export default function ServicesPage() {
                   </h2>
 
                   {service.paragraphs.map((item) => (
-                    <p
-                      key={item}
-                      className="mt-5 text-balance text-slate-500"
-                    >
+                    <p key={item} className="mt-5 text-balance text-slate-500">
                       {item}
                     </p>
                   ))}
