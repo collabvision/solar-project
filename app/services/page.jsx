@@ -35,8 +35,7 @@ export default function ServicesPage() {
           For Every Energy Need
         </>
       ),
-      image:
-        "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800&auto=format&fit=crop",
+      image: "./others/rooftop5.jpeg",
       imageTitle: "Reliable Solar Power",
       imageDesc:
         "Customized solar photovoltaic solutions for residential, commercial, industrial and utility-scale applications.",
@@ -75,8 +74,7 @@ export default function ServicesPage() {
           Of Electric Mobility
         </>
       ),
-      image:
-        "https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?q=80&w=1800&auto=format&fit=crop",
+      image: "./others/ev2.jpeg",
       imageTitle: "Smart EV Charging",
       imageDesc:
         "Complete EV charging infrastructure designed for commercial, industrial, institutional and public charging applications.",
@@ -106,7 +104,7 @@ export default function ServicesPage() {
 
     {
       id: "wind-turbines",
-      badge: "DOMESTIC SCALE WIND TURBINES",
+      badge: "",
       title: (
         <>
           Harnessing Wind Energy
@@ -114,9 +112,8 @@ export default function ServicesPage() {
           For Sustainable Power
         </>
       ),
-      image:
-        "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1800&auto=format&fit=crop",
-      imageTitle: "Wind + Solar",
+      image: "./others/wind2.png",
+      imageTitle: "Wind",
       imageDesc:
         "Sustainable small-scale wind energy solutions designed for homes, farms and hybrid renewable energy systems.",
       paragraphs: [
@@ -152,8 +149,7 @@ export default function ServicesPage() {
           Everyday Use
         </>
       ),
-      image:
-        "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800&auto=format&fit=crop",
+      image: "./others/RCC_Floor_Mounted_Structure-5KW.jpeg",
       imageTitle: "Smart Solar Products",
       imageDesc:
         "Reliable solar-powered appliances designed to reduce energy consumption while supporting sustainable living.",
@@ -191,8 +187,7 @@ export default function ServicesPage() {
           Efficiency
         </>
       ),
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1800&auto=format&fit=crop",
+      image: "./others/ai_rooftop.jpeg",
       imageTitle: "Improve Efficiency",
       imageDesc:
         "Detailed assessments that help organizations reduce energy consumption and improve operational efficiency.",
@@ -229,8 +224,7 @@ export default function ServicesPage() {
           Net Metering
         </>
       ),
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1800&auto=format&fit=crop",
+      image: "./others/rooftop2.jpeg",
       imageTitle: "Approval Management",
       imageDesc:
         "Complete support for utility approvals and net metering services.",
@@ -266,8 +260,7 @@ export default function ServicesPage() {
           Energy Projects
         </>
       ),
-      image:
-        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1800&auto=format&fit=crop",
+      image: "./others/Residential_Rooftop_Structure-3_KW.jpeg",
       imageTitle: "Solar Financing",
       imageDesc:
         "Flexible financing options for residential, commercial and industrial solar projects.",
@@ -347,7 +340,7 @@ export default function ServicesPage() {
                 energy.
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-4">
+              {/* <div className="mt-7 flex flex-wrap gap-4">
                 <a
                   href="#solar-pv"
                   className="rounded-full bg-slate-900 px-8 py-4 font-semibold text-white transition hover:scale-105"
@@ -361,7 +354,7 @@ export default function ServicesPage() {
                 >
                   Get Free Consultation
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* RIGHT */}
@@ -369,7 +362,7 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="overflow-hidden rounded-[40px] shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800&auto=format&fit=crop"
+                  src="./others/rooftop3.jpeg"
                   alt="Renewable Energy Solutions"
                   className="h-[700px] w-full object-cover"
                 />
@@ -449,10 +442,11 @@ export default function ServicesPage() {
                   {/* Floating Card */}
 
                   <div className="absolute bottom-6 left-6 right-6 rounded-[28px] border border-white/30 bg-white/85 p-6 shadow-xl backdrop-blur-xl">
-                    <span className="inline-flex rounded-full bg-slate-900 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[2px] text-white">
-                      {service.badge}
-                    </span>
-
+                    {service.badge !== "" && (
+                      <span className="inline-flex rounded-full bg-slate-900 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[2px] text-white">
+                        {service.badge}
+                      </span>
+                    )}
                     <h3 className="mt-4 text-2xl font-black text-slate-900">
                       {service.imageTitle}
                     </h3>
@@ -546,7 +540,7 @@ export default function ServicesPage() {
                       ))}
                     </div>
 
-                    <Link
+                    {/* <Link
                       href={service.link}
                       className={`mt-3 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-300 hover:scale-105 ${
                         reverse
@@ -556,7 +550,7 @@ export default function ServicesPage() {
                     >
                       Learn More
                       <ArrowUpRight size={16} />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

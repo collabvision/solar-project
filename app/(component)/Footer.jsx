@@ -144,7 +144,7 @@ export default function Footer() {
 
         .footer-grid {
           display: grid;
-          grid-template-columns: 2fr 1fr 1fr 1fr;
+          grid-template-columns: 2fr 1fr ;
           gap: 50px;
 
           padding-top: 45px;

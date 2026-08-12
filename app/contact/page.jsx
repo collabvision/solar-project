@@ -109,7 +109,7 @@ const page = () => {
 
               {/* Buttons */}
 
-              <div className="mt-12 flex flex-wrap gap-5">
+              {/* <div className="mt-12 flex flex-wrap gap-5">
                 <button className="rounded-full bg-slate-900 px-8 py-4 font-semibold text-white transition hover:scale-105">
                   Get Free Consultation
                 </button>
@@ -117,7 +117,7 @@ const page = () => {
                 <button className="rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white">
                   Contact Our Team
                 </button>
-              </div>
+              </div> */}
             </div>
 
             {/* RIGHT */}
@@ -125,7 +125,7 @@ const page = () => {
             <div className="relative">
               <div className="overflow-hidden rounded-[40px] shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800&auto=format&fit=crop"
+                  src="./others/rooftop5.jpeg"
                   alt="Solar Energy"
                   className="h-[720px] w-full object-cover"
                 />
@@ -335,7 +335,7 @@ const page = () => {
                     target="_blank"
                     className="inline-flex items-center rounded-full bg-white px-6 py-3 font-semibold text-slate-900 transition hover:scale-105"
                   >
-                    Directions →
+                    Directions
                   </a>
                 </div>
               </div>

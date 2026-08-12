@@ -39,7 +39,7 @@
 }
 
 .light {
-  --nav-bg: rgba(255, 255, 255, 0.72);
+  --nav-bg: #ffffff;
   --nav-border: rgba(226, 232, 240, 0.9);
 
   --text: #0f172a;
@@ -323,7 +323,7 @@
 /* DARK */
 
 .navbar.dark .mobile-menu {
-  background: rgba(15, 23, 42, 0.88);
+  background: #343434;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 .mobile-menu a {
@@ -554,7 +554,7 @@
   flex-direction: column;
   gap: 12px;
 
-  margin-top: 18px;
+  /* margin-top: 18px; */
   padding: 18px;
 
   border-radius: 26px;
@@ -576,14 +576,14 @@
 /* Light */
 
 .navbar.light .mobile-menu {
-  background: rgba(255, 255, 255, 0.96);
+  background: white;
   border: 1px solid #e5e7eb;
 }
 
 /* Dark */
 
 .navbar.dark .mobile-menu {
-  background: rgba(15, 23, 42, 0.9);
+  background: #343434;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
