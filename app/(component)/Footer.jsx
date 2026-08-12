@@ -108,11 +108,11 @@ export default function Footer() {
               All Rights Reserved.
             </p>
 
-            <div className="footer-links">
+            {/* <div className="footer-links">
               <Link href="/privacy-policy">Privacy Policy</Link>
 
               <Link href="/terms-and-conditions">Terms & Conditions</Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

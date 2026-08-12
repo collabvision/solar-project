@@ -866,7 +866,7 @@ export default function WattWorksLandingPage() {
                 Explore Our Solar Services
               </h2>
             </div>
-            <a href="#" className="btn-black">
+            <a href="./services" className="btn-black">
               View All Services <span style={{ fontSize: "0.8rem" }}>➔</span>
             </a>
           </div>
@@ -1173,7 +1173,6 @@ export default function WattWorksLandingPage() {
             >
               Solar EPC
             </button>
-    
           </div>
 
           <div className="dept-display-panel reveal">
@@ -1483,7 +1482,8 @@ export default function WattWorksLandingPage() {
         }
         .hero-title-line span {
           display: inline-block;
-font-size: clamp(1.8rem, 4.5vw, 4rem);          line-height: 1.05;
+          font-size: clamp(1.8rem, 4.5vw, 4rem);
+          line-height: 1.05;
           font-weight: 800;
           color: white;
           letter-spacing: -2px;

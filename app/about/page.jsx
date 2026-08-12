@@ -19,7 +19,13 @@ import {
   MapPin,
 } from "lucide-react";
 import { Rocket, Eye, Scale, Award } from "lucide-react";
-import { Home, GraduationCap, FileBarChart, HardHat, LineChart } from "lucide-react";
+import {
+  Home,
+  GraduationCap,
+  FileBarChart,
+  HardHat,
+  LineChart,
+} from "lucide-react";
 import Navbar from "@/app/(component)/Navbar";
 import Footer from "@/app/(component)/Footer";
 
@@ -86,8 +92,8 @@ export default function AboutHero() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
-              WattWorks Energies Private Limited. is a leading renewable energy company
-              dedicated to helping homes, businesses, industries and
+              WattWorks Energies Private Limited. is a leading renewable energy
+              company dedicated to helping homes, businesses, industries and
               institutions transition to clean, affordable and sustainable
               power. Since 2020, we have been delivering reliable solar
               solutions across Maharashtra, Karnataka and Goa, enabling
@@ -105,7 +111,7 @@ export default function AboutHero() {
                   WHO WE ARE
                 </span>
 
-                <h1 className="mt-6 text-3xl font-black leading-tight text-slate-900 sm:text-4xl md:text-5xl">
+                <h1 className="mt-6 text-2xl font-black leading-tight text-slate-900 sm:text-2xl md:text-2xl">
                   Engineering
                   <br />
                   Reliable Solar
@@ -113,12 +119,12 @@ export default function AboutHero() {
                   Solutions.
                 </h1>
                 <p className="mt-6 text-base leading-7 text-slate-500 sm:leading-8">
-                  Earlier known as WattWorks Energies Private Limited., we specialize
-                  in Engineering, Procurement, Installation, Commissioning,
-                  Project Management Consultancy, Engineering Consultancy,
-                  Energy Audits, Transformer & Substation Installation, Solar
-                  Financing and complete Operation & Maintenance services for
-                  renewable energy projects.
+                  Earlier known as WattWorks Energies Private Limited., we
+                  specialize in Engineering, Procurement, Installation,
+                  Commissioning, Project Management Consultancy, Engineering
+                  Consultancy, Energy Audits, Transformer & Substation
+                  Installation, Solar Financing and complete Operation &
+                  Maintenance services for renewable energy projects.
                 </p>
 
                 {/* Features */}
@@ -145,12 +151,15 @@ export default function AboutHero() {
                   </div>
                 </div>
 
-                <button className="mt-10 inline-flex w-full items-center justify-center gap-3 rounded-full bg-slate-900 px-8 py-4 font-semibold text-white transition hover:scale-105 hover:bg-black sm:w-auto">
-                  Learn About Our Services
+                <a
+                  href="./services"
+                  className="mt-10 inline-flex w-full items-center justify-center gap-3 rounded-full bg-slate-900 px-8 py-4 font-semibold text-white transition hover:scale-105 hover:bg-black sm:w-auto"
+                >
+                  All services
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-black">
                     <ArrowRight size={18} />
                   </span>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -158,7 +167,7 @@ export default function AboutHero() {
             <div className="relative xl:col-span-5">
               <div className="overflow-hidden rounded-[26px] shadow-2xl sm:rounded-[36px]">
                 <img
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1400&auto=format&fit=crop"
+                  src="./others/rooftop3.jpeg"
                   alt=""
                   className="h-[300px] w-full object-cover sm:h-[420px] md:h-[520px] xl:h-[620px]"
                 />
@@ -168,10 +177,10 @@ export default function AboutHero() {
               <div className="mt-4 rounded-[24px] border border-white/40 bg-white/70 p-5 shadow-2xl backdrop-blur-xl xl:absolute xl:bottom-8 xl:left-6 xl:mt-0 xl:w-auto xl:rounded-[30px] xl:p-6">
                 <div className="flex items-center gap-4 sm:gap-5">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-100 sm:h-16 sm:w-16">
-                    <MapPin className="h-7 w-7 text-slate-900 sm:h-8 sm:w-8" />
+                    <MapPin className="h-7 w-7 text-black sm:h-8 sm:w-8" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-500">Operating Across</p>
+                    <p className="text-sm text-slate-800">Operating Across</p>
                     <h3 className="text-lg font-black sm:text-xl">
                       Maharashtra Karnataka Goa
                     </h3>
@@ -193,7 +202,7 @@ export default function AboutHero() {
                   empower individuals and businesses to achieve sustainable
                   growth while protecting the environment."
                 </p>
-                <div className="mt-8 flex items-center gap-4">
+                {/* <div className="mt-8 flex items-center gap-4">
                   <img
                     src="https://randomuser.me/api/portraits/men/41.jpg"
                     alt=""
@@ -205,17 +214,17 @@ export default function AboutHero() {
                       Renewable Energy Excellence
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Engineer Image */}
-              <div className="overflow-hidden rounded-[24px] sm:rounded-[30px]">
+              {/* <div className="overflow-hidden rounded-[24px] sm:rounded-[30px]">
                 <img
                   src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=900&auto=format&fit=crop"
                   className="h-40 w-full object-cover transition duration-500 hover:scale-110 sm:h-52"
                   alt=""
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -322,7 +331,7 @@ export default function AboutHero() {
               {/* Image */}
               <div className="relative overflow-hidden rounded-[26px] shadow-2xl sm:rounded-[36px]">
                 <img
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1400&auto=format&fit=crop"
+                  src="./others/rooftop1.jpeg"
                   alt=""
                   className="h-[260px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[300px] lg:h-[350px]"
                 />
@@ -336,9 +345,9 @@ export default function AboutHero() {
                     <br className="hidden sm:block" /> From Design To
                     <br className="hidden sm:block" /> Long-Term Maintenance.
                   </h2>
-                  <button className="mt-6 inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black sm:mt-8 sm:px-6 sm:text-base">
+                  {/* <button className="mt-6 inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black sm:mt-8 sm:px-6 sm:text-base">
                     Explore Our Services <ArrowUpRight size={18} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -390,10 +399,10 @@ export default function AboutHero() {
                 </p>
               </div>
 
-              <button className="mt-10 inline-flex w-full items-center justify-center gap-3 rounded-full bg-slate-900 px-8 py-4 font-semibold text-white transition hover:scale-105 sm:mt-12 sm:w-auto">
+              {/* <button className="mt-10 inline-flex w-full items-center justify-center gap-3 rounded-full bg-slate-900 px-8 py-4 font-semibold text-white transition hover:scale-105 sm:mt-12 sm:w-auto">
                 Explore Our Services
                 <ArrowUpRight size={18} />
-              </button>
+              </button> */}
             </div>
 
             {/* RIGHT */}
@@ -401,7 +410,7 @@ export default function AboutHero() {
               {/* Main Image */}
               <div className="overflow-hidden rounded-[28px] shadow-2xl sm:rounded-[36px]">
                 <img
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop"
+                  src="./others/RCC_Floor_Mounted_Structure-5KW.jpeg"
                   alt="Solar Plant"
                   className="h-[320px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[440px] md:h-[560px] lg:h-[720px]"
                 />
@@ -485,28 +494,19 @@ export default function AboutHero() {
           <div className="grid gap-6 sm:grid-cols-2 sm:gap-8 xl:grid-cols-4">
             {[
               {
-                image:
-                  "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1200&auto=format&fit=crop",
+                image: "./others/team-member1.jpeg",
                 name: "Your Name",
                 role: "Managing Director",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+                image: "./others/team-member2.jpeg",
                 name: "Your Name",
                 role: "Project Director",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+                image: "./others/team-member3.jpeg",
                 name: "Your Name",
                 role: "Senior Engineer",
-              },
-              {
-                image:
-                  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1200&auto=format&fit=crop",
-                name: "Your Name",
-                role: "Operations Head",
               },
             ].map((member) => (
               <div
@@ -527,10 +527,10 @@ export default function AboutHero() {
                 <div className="absolute inset-x-4 bottom-4 rounded-[22px] border border-white/30 bg-white/15 p-5 backdrop-blur-2xl sm:inset-x-5 sm:bottom-5 sm:rounded-[28px] sm:p-6">
                   <div className="flex items-center justify-between gap-3">
                     <div className="min-w-0">
-                      <h3 className="truncate text-xl font-black text-white sm:text-2xl">
+                      <h3 className="truncate text-xl font-black text-white sm:text-l">
                         {member.name}
                       </h3>
-                      <p className="mt-1 truncate text-[10px] font-semibold uppercase tracking-[3px] text-white/80 sm:text-xs sm:tracking-[4px]">
+                      <p className="mt-1 truncate text-[10px] font-semibold uppercase text-white/80 ">
                         {member.role}
                       </p>
                     </div>
@@ -590,10 +590,10 @@ export default function AboutHero() {
               <div className="mt-8 h-1 w-24 rounded-full bg-slate-900" />
 
               <p className="mt-8 text-base leading-7 text-slate-600 sm:text-lg sm:leading-9">
-                To accelerate the adoption of renewable energy by providing
-                innovative, reliable, and cost-effective solar solutions that
-                empower individuals and businesses to achieve sustainable growth
-                while protecting the environment.
+                To provide quality-driven renewable energy solutions that
+                deliver long-term savings, reduce operational costs and are
+                supported by professional execution and lifelong customer
+                service.
               </p>
             </div>
 
@@ -616,10 +616,9 @@ export default function AboutHero() {
               <div className="mt-8 h-1 w-24 rounded-full bg-white" />
 
               <p className="mt-8 text-base leading-7 text-slate-300 sm:text-lg sm:leading-9">
-                To become a trusted leader in the renewable energy sector by
-                delivering world-class solar solutions that contribute to a
-                cleaner, greener, and energy-independent future for generations
-                to come.
+                To empower customers with dependable renewable energy solutions
+                that lower energy costs and create a cleaner, energy-secure
+                future.
               </p>
             </div>
 
@@ -664,7 +663,7 @@ export default function AboutHero() {
             {/* LARGE FEATURE CARD */}
             <div className="group relative min-h-[420px] overflow-hidden rounded-[28px] sm:col-span-2 sm:min-h-[440px] sm:rounded-[38px] lg:col-span-2 lg:row-span-2 lg:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800&auto=format&fit=crop"
+                src="./others/rooftop5.jpeg"
                 alt="Solar EPC Solutions"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -677,9 +676,9 @@ export default function AboutHero() {
                   <Sun className="h-8 w-8 text-white drop-shadow-lg sm:h-10 sm:w-10" />
                 </div>
 
-                <span className="inline-flex rounded-full border border-white/20 bg-white/20 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[2px] text-white backdrop-blur-xl sm:px-5 sm:py-2 sm:text-xs sm:tracking-[3px]">
+                {/* <span className="inline-flex rounded-full border border-white/20 bg-white/20 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[2px] text-white backdrop-blur-xl sm:px-5 sm:py-2 sm:text-xs sm:tracking-[3px]">
                   Featured Service
-                </span>
+                </span> */}
 
                 <h3 className="mt-5 max-w-lg text-3xl font-black leading-[1.1] text-white sm:mt-6 sm:text-4xl lg:text-5xl">
                   Solar EPC
@@ -693,17 +692,17 @@ export default function AboutHero() {
                   with the highest standards of quality and safety.
                 </p>
 
-                <button className="mt-6 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition duration-300 hover:scale-105 sm:mt-8 sm:px-7 sm:py-4 sm:text-base">
+                {/* <button className="mt-6 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition duration-300 hover:scale-105 sm:mt-8 sm:px-7 sm:py-4 sm:text-base">
                   Explore Service
                   <ArrowUpRight size={18} />
-                </button>
+                </button> */}
               </div>
             </div>
 
             {/* SOLAR CONSULTANCY */}
             <div className="group relative min-h-[280px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl sm:rounded-[32px] lg:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop"
+                src="./others/RCC_Roof_Elevated_Structure-70_KW.jpeg"
                 alt="Solar Consultancy"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -730,7 +729,7 @@ export default function AboutHero() {
             {/* ROOFTOP SOLAR */}
             <div className="group relative min-h-[280px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl sm:rounded-[32px] lg:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1200&auto=format&fit=crop"
+                src="./others/Residential_Rooftop_Structure-3_KW.jpeg"
                 alt="Rooftop Solar"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -757,7 +756,7 @@ export default function AboutHero() {
             {/* GROUND MOUNTED */}
             <div className="group relative min-h-[300px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl sm:col-span-2 sm:rounded-[32px] lg:col-span-2 lg:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1800&auto=format&fit=crop"
+                src="./others/rooftop3.jpeg"
                 alt="Ground Mounted Solar"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -784,7 +783,7 @@ export default function AboutHero() {
             {/* SOLAR CARPORTS */}
             <div className="group relative min-h-[260px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:rounded-[32px] lg:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop"
+                src="./others/rooftop4.jpeg"
                 alt="Solar Carports"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -808,7 +807,7 @@ export default function AboutHero() {
             {/* EV CHARGING INFRASTRUCTURE */}
             <div className="group relative min-h-[300px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:col-span-2 sm:rounded-[32px] lg:col-span-2 lg:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?q=80&w=1600&auto=format&fit=crop"
+                src="./others/rooftop2.jpeg"
                 alt="EV Charging Infrastructure"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -835,7 +834,7 @@ export default function AboutHero() {
             {/* OPERATIONS & MAINTENANCE */}
             <div className="group relative min-h-[260px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:rounded-[32px] lg:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+                src="./others/RCC_Floor_Mounted_Structure-5KW.jpeg"
                 alt="Operations & Maintenance"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -860,7 +859,7 @@ export default function AboutHero() {
             {/* ENERGY AUDITS */}
             <div className="group relative min-h-[320px] overflow-hidden rounded-[28px] border border-white/60 bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:col-span-2 sm:rounded-[36px] lg:col-span-4 lg:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1800&auto=format&fit=crop"
+                src="./others/ai_rooftop.jpeg"
                 alt="Energy Audits & Performance Optimization"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -993,10 +992,26 @@ export default function AboutHero() {
           {/* Grid */}
           <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
             {[
-              { icon: Scale, title: "Integrity", text: "We conduct every project with transparency, honesty, and professional ethics." },
-              { icon: Award, title: "Excellence", text: "We strive for excellence in engineering, execution, customer service, and long-term performance." },
-              { icon: Lightbulb, title: "Innovation", text: "We continuously adopt modern technologies and best practices to deliver superior renewable energy solutions." },
-              { icon: ShieldCheck, title: "Reliability", text: "We stand by our commitments and provide dependable support throughout the life of every solar installation." },
+              {
+                icon: Scale,
+                title: "Integrity",
+                text: "We conduct every project with transparency, honesty, and professional ethics.",
+              },
+              {
+                icon: Award,
+                title: "Excellence",
+                text: "We strive for excellence in engineering, execution, customer service, and long-term performance.",
+              },
+              {
+                icon: Lightbulb,
+                title: "Innovation",
+                text: "We continuously adopt modern technologies and best practices to deliver superior renewable energy solutions.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Reliability",
+                text: "We stand by our commitments and provide dependable support throughout the life of every solar installation.",
+              },
             ].map((v) => {
               const Icon = v.icon;
               return (
@@ -1065,7 +1080,7 @@ export default function AboutHero() {
           {/* Featured Project */}
           <div className="group relative mb-8 overflow-hidden rounded-[28px] sm:mb-10 sm:rounded-[40px]">
             <img
-              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800&auto=format&fit=crop"
+              src="./others/rooftop1.jpeg"
               alt="Industrial Rooftop Solar Installations"
               className="h-[360px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[460px] md:h-[560px] lg:h-[650px]"
             />
@@ -1097,14 +1112,50 @@ export default function AboutHero() {
           </div>
 
           {/* Project Grid */}
-          <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1200&auto=format&fit=crop", alt: "Residential Solar Power Systems", icon: Home, title: ["Residential Solar", "Power Systems"] },
-              { image: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop", alt: "Solar Carports", icon: Car, title: ["Solar", "Carports"] },
-              { image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1?q=80&w=1200&auto=format&fit=crop", alt: "Ground Mounted Solar Plants", icon: Factory, title: ["Ground-Mounted", "Solar Plants"] },
-              { image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop", alt: "Educational Institution Solar Projects", icon: GraduationCap, title: ["Educational Institution", "Solar Projects"] },
-              { image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop", alt: "Open Access Renewable Energy Consultancy", icon: ClipboardCheck, title: ["Open Access Renewable", "Energy Consultancy"] },
-              { image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop", alt: "Energy Audit and Optimization Projects", icon: FileBarChart, title: ["DPR & Energy Audit", "Projects"] },
+              {
+                image:
+                  "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1200&auto=format&fit=crop",
+                alt: "Residential Solar Power Systems",
+                icon: Home,
+                title: ["Residential Solar", "Power Systems"],
+              },
+              {
+                image:
+                  "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop",
+                alt: "Solar Carports",
+                icon: Car,
+                title: ["Solar", "Carports"],
+              },
+              {
+                image:
+                  "https://images.unsplash.com/photo-1473341304170-971dccb5ac1?q=80&w=1200&auto=format&fit=crop",
+                alt: "Ground Mounted Solar Plants",
+                icon: Factory,
+                title: ["Ground-Mounted", "Solar Plants"],
+              },
+              {
+                image:
+                  "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop",
+                alt: "Educational Institution Solar Projects",
+                icon: GraduationCap,
+                title: ["Educational Institution", "Solar Projects"],
+              },
+              {
+                image:
+                  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
+                alt: "Open Access Renewable Energy Consultancy",
+                icon: ClipboardCheck,
+                title: ["Open Access Renewable", "Energy Consultancy"],
+              },
+              {
+                image:
+                  "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop",
+                alt: "Energy Audit and Optimization Projects",
+                icon: FileBarChart,
+                title: ["DPR & Energy Audit", "Projects"],
+              },
             ].map((p) => {
               const Icon = p.icon;
               return (
@@ -1133,7 +1184,7 @@ export default function AboutHero() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
 
           {/* Bottom Statement */}
           <div className="mt-10 rounded-[28px] border border-slate-200 bg-slate-900 p-7 text-center shadow-2xl sm:mt-12 sm:rounded-[36px] sm:p-10">
@@ -1150,7 +1201,7 @@ export default function AboutHero() {
       </section>
 
       {/* ===================== EXPERTISE (STICKY IMAGE + LIST) ===================== */}
-      <section className="bg-black py-20 text-white sm:py-24 lg:py-32">
+      {/* <section className="bg-black py-20 text-white sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 max-w-3xl sm:mb-16 lg:mb-20">
             <span className="rounded-full border border-white/20 px-4 py-2 text-xs sm:text-sm">
@@ -1171,7 +1222,7 @@ export default function AboutHero() {
           </div>
 
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-20">
-            {/* LEFT — sticky only from lg upward */}
+            LEFT — sticky only from lg upward 
             <div className="h-fit lg:sticky lg:top-24">
               <div className="overflow-hidden rounded-[28px] sm:rounded-[40px]">
                 <img
@@ -1182,7 +1233,7 @@ export default function AboutHero() {
               </div>
             </div>
 
-            {/* RIGHT */}
+            {/* RIGHT 
             <div>
               {services.map((service) => {
                 const Icon = service.icon;
@@ -1213,12 +1264,12 @@ export default function AboutHero() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===================== CLOSING CTA ===================== */}
       <section className="relative overflow-hidden py-20 sm:py-24 lg:py-32">
         <img
-          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop"
+          src="./others/rooftop5.jpeg"
           alt="Solar Energy"
           className="absolute inset-0 h-full w-full object-cover"
         />
