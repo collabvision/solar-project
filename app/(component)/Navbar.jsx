@@ -6,13 +6,13 @@ import { usePathname, useRouter } from "next/navigation";
 import { ArrowUpRight, Menu, Search, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 import "./Navbar.css";
+import Image from "next/image";
 
 export default function Navbar({ theme = "light" }) {
   const pathname = usePathname();
   const router = useRouter();
 
   const isDark = theme === "dark";
-
 
   /* ===============================
       STATE
@@ -160,8 +160,16 @@ export default function Navbar({ theme = "light" }) {
               className="mobile-logo"
               onClick={() => navigate("/")}
             >
-              <h2>Wattworks</h2>
-              <span>ENERGIES</span>
+              <Image
+                src="/logo.jpeg"
+                alt="Wattworks Energies"
+                width={52}
+                height={52}
+              />
+              <div>
+                <h2>Wattworks</h2>
+                <span>ENERGIES</span>
+              </div>
             </Link>
 
             <button
@@ -234,8 +242,16 @@ export default function Navbar({ theme = "light" }) {
             {/* CENTER */}
 
             <Link href="/" className="logo">
-              <span className="logo-title">Wattworks</span>
-              <span className="logo-sub">ENERGIES</span>
+              <Image
+                src="/logo.jpeg"
+                alt="Wattworks Energies"
+                width={55}
+                height={55}
+              />
+              <div className="logoTxt">
+                <span className="logo-title">Wattworks</span>
+                <span className="logo-sub">ENERGIES</span>
+              </div>
             </Link>
 
             {/* RIGHT */}

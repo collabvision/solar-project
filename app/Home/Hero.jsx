@@ -661,10 +661,10 @@ export default function WattworksLandingPage() {
             </p>
           </div>
 
-          <div className="hero-floating-bottom-bar">
+          {/* <div className="hero-floating-bottom-bar">
             <span style={{ color: "var(--accent)" }}>●</span> LEADING SOLAR
             EXCELLENCE WITH WATTWORKS
-          </div>
+          </div> */}
 
           <div className="social-vertical-dock">
             <a href="#" className="social-pill">
