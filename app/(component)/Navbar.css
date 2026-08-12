@@ -70,7 +70,7 @@
 
   padding: 0 28px;
 
-  border-radius: 999px;
+  border-radius: 25px;
 
   background: var(--nav-bg);
 
@@ -848,6 +848,7 @@
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 2px;
+  text-align:left
 }
 
 /* .mobile-navbar {
@@ -865,6 +866,6 @@
 .logoTxt{
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  /* justify-content:start;
+  align-items:center; */
 }

@@ -81,7 +81,7 @@ export default function AboutHero() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           {/* Heading */}
           <div className="mb-10 text-center sm:mb-14">
-            <span className="inline-flex rounded-full border border-white/40 bg-white/70 px-4 py-2 text-xs font-semibold shadow-lg backdrop-blur-xl sm:px-5 sm:text-sm">
+            <span className="inline-flex rounded-full mt-4 border border-white/40 bg-white/70 px-4 py-2 text-xs font-semibold shadow-lg backdrop-blur-xl sm:px-5 sm:text-sm">
               ABOUT WattWorks ENERGIES
             </span>
 

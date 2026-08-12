@@ -217,6 +217,21 @@ export default function Navbar({ theme = "light" }) {
         ========================= */}
 
           <div className="desktop-navbar">
+ {/* CENTER */}
+
+            <Link href="/" className="logo">
+              <Image
+                src="/logo.jpeg"
+                alt="WattWorks Energies"
+                width={55}
+                height={55}
+              />
+              <div className="logoTxt">
+                <span className="logo-title">WattWorks</span>
+                <span className="logo-sub">ENERGIES</span>
+              </div>
+            </Link>
+
             {/* LEFT */}
 
             <nav className="nav-links">
@@ -239,25 +254,12 @@ export default function Navbar({ theme = "light" }) {
               ))}
             </nav>
 
-            {/* CENTER */}
-
-            <Link href="/" className="logo">
-              <Image
-                src="/logo.jpeg"
-                alt="WattWorks Energies"
-                width={55}
-                height={55}
-              />
-              <div className="logoTxt">
-                <span className="logo-title">WattWorks</span>
-                <span className="logo-sub">ENERGIES</span>
-              </div>
-            </Link>
+           
 
             {/* RIGHT */}
 
-            <div className="nav-actions">
-              {/* Search */}
+            {/* <div className="nav-actions">
+              {/* Search *
 
               <div className="search-wrapper" ref={searchRef}>
                 <Search size={18} className="search-icon" />
@@ -308,8 +310,8 @@ export default function Navbar({ theme = "light" }) {
               {/* <a href="tel:+919845853002" className="quote-btn">
                 Get Quote
                 <ArrowUpRight size={18} />
-              </a> */}
-            </div>
+              </a> 
+            </div> */}
           </div>
         </div>
       </header>
