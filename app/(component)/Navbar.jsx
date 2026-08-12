@@ -202,14 +202,14 @@ export default function Navbar({ theme = "light" }) {
               </button>
             ))}
 
-            <a
+            {/* <a
               href="tel:+919845853002"
               className="mobile-btn"
               onClick={() => setMobileMenuOpen(false)}
             >
               Get Quote
               <ArrowUpRight size={18} />
-            </a>
+            </a> */}
           </div>
 
           {/* =========================
@@ -305,10 +305,10 @@ export default function Navbar({ theme = "light" }) {
 
               {/* Quote */}
 
-              <a href="tel:+919845853002" className="quote-btn">
+              {/* <a href="tel:+919845853002" className="quote-btn">
                 Get Quote
                 <ArrowUpRight size={18} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

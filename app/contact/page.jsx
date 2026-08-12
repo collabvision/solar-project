@@ -304,12 +304,14 @@ const page = () => {
               <div className="overflow-hidden rounded-[36px] border border-slate-200 bg-slate-900 p-5 shadow-xl">
                 <div className="overflow-hidden rounded-[24px]">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124569.22393482005!2d74.52904170000001!3d15.8660824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf669f5095362f%3A0x7e34b31edcdefb5f!2sBelagavi%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1782492085063!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6195593522007!2d74.51444479999999!3d15.874974099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf614cd7360a57%3A0xcebf1837d08d66b2!2sKAYAKA%20TOWERS!5e1!3m2!1sen!2sin!4v1786544019005!5m2!1sen!2sin"
                     className="h-[260px] w-full"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                   />
+
+              
                 </div>
 
                 <div className="mt-6 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
@@ -329,7 +331,7 @@ const page = () => {
                   </div>
 
                   <a
-                    href="https://maps.app.goo.gl/rNkTktuJzV2u5nEv6"
+                    href="https://maps.app.goo.gl/C8UTG4ojJCkswNg59"
                     target="_blank"
                     className="inline-flex items-center rounded-full bg-white px-6 py-3 font-semibold text-slate-900 transition hover:scale-105"
                   >

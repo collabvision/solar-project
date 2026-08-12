@@ -46,8 +46,8 @@ const DEPT_CONTENT = {
     badge: "Residential & Commercial",
     title: "Rooftop Solar Systems Built Around Your Roof",
     body: "Customized rooftop solar solutions for homes, apartments, commercial buildings, educational institutions, hospitals, and industries — engineered for maximum shadow-free generation.",
-    cta: "Consult a Rooftop Specialist",
-    img: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=900&auto=format&fit=crop",
+    cta: "contactnow",
+    img: "./others/rooftop3.jpeg",
   },
   epc: {
     tagColor: "rgba(16,185,129,0.12)",
@@ -55,18 +55,18 @@ const DEPT_CONTENT = {
     badge: "Turnkey Delivery",
     title: "Complete Solar EPC, Start to Finish",
     body: "Engineering, Procurement, Construction, Installation, Testing, and Commissioning — all delivered under one roof, with net metering and utility approval support handled for you.",
-    cta: "Talk to Our EPC Team",
-    img: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=900&auto=format&fit=crop",
+    cta: "contact now",
+    img: "./others/rooftop4.jpeg",
   },
-  ev: {
-    tagColor: "rgba(245,158,11,0.14)",
-    tagText: "#f59e0b",
-    badge: "Future-Ready Infrastructure",
-    title: "EV Charging Stations Powered by the Sun",
-    body: "Design, supply, installation, and commissioning of EV charging infrastructure for commercial properties, fuel stations, institutions, and public facilities.",
-    cta: "Plan an EV Charging Site",
-    img: "https://images.unsplash.com/photo-1620912189865-3cd06a6d4f9d?q=80&w=900&auto=format&fit=crop",
-  },
+  // ev: {
+  //   tagColor: "rgba(245,158,11,0.14)",
+  //   tagText: "#f59e0b",
+  //   badge: "Future-Ready Infrastructure",
+  //   title: "EV Charging Stations Powered by the Sun",
+  //   body: "Design, supply, installation, and commissioning of EV charging infrastructure for commercial properties, fuel stations, institutions, and public facilities.",
+  //   cta: "Plan an EV Charging Site",
+  //   img: "https://images.unsplash.com/photo-1620912189865-3cd06a6d4f9d?q=80&w=900&auto=format&fit=crop",
+  // },
 };
 
 const BENEFITS = [
@@ -79,7 +79,7 @@ const BENEFITS = [
   },
   {
     icon: BatteryCharging,
-    value: "25+",
+    value: "30+",
     title: "Years",
     desc: "Reliable power generation",
     color: "#10b981",
@@ -100,7 +100,7 @@ const BENEFITS = [
   },
   {
     icon: ShieldCheck,
-    value: "24/7",
+    value: "Predictable",
     title: "Energy Security",
     desc: "Protection from tariff hikes",
     color: "#6366f1",
@@ -634,7 +634,7 @@ export default function WattWorksLandingPage() {
               <span>Switch to Solar.</span>
             </span>
             <span className="hero-title-line">
-              <span>Power a Sustainable Tomorrow.</span>
+              <span>Powering a Sustainable Tomorrow.</span>
             </span>
           </h1>
           <p>
@@ -720,7 +720,7 @@ export default function WattWorksLandingPage() {
           <div className="split-grid-layout reveal">
             <div className="left-info-block">
               <span
-                className=" text-4xl font-bold border border-gray-400 rounded-4xl p-4 "
+                className="badge-pill "
                 style={{ marginBottom: 15, display: "inline-block" }}
               >
                 About Us
@@ -1062,7 +1062,7 @@ export default function WattWorksLandingPage() {
       </section>
 
       {/* ===================== TESTIMONIALS ===================== */}
-      <section className="client-reviews">
+      {/* <section className="client-reviews">
         <div className="container">
           <div className="badge-center">
             <span className="badge-pill">Testimonials</span>
@@ -1076,7 +1076,7 @@ export default function WattWorksLandingPage() {
                 ref={(el) => (reviewRefs.current[i] = el)}
                 style={{ visibility: i === 0 ? "visible" : "hidden" }}
               >
-                <img src={r.avatar} alt={r.name} className="review-avatar" />
+                 <img src={r.avatar} alt={r.name} className="review-avatar" /> 
                 <p className="quote-text">&quot;{r.quote}&quot;</p>
                 <div className="review-meta">
                   <h5>{r.name}</h5>
@@ -1098,7 +1098,7 @@ export default function WattWorksLandingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===================== MARQUEE ===================== */}
       <section className="marquee-section">
@@ -1173,12 +1173,7 @@ export default function WattWorksLandingPage() {
             >
               Solar EPC
             </button>
-            <button
-              className={`tab-trigger ${activeTab === "ev" ? "active" : ""}`}
-              onClick={() => setActiveTab("ev")}
-            >
-              EV Charging
-            </button>
+    
           </div>
 
           <div className="dept-display-panel reveal">
@@ -1213,7 +1208,7 @@ export default function WattWorksLandingPage() {
               >
                 {dept.body}
               </p>
-              <a href="https://wa.me/919845853002" className="btn-black">
+              <a href="./contact" className="btn-black">
                 {dept.cta}{" "}
                 <span
                   className="arrow-circle"
@@ -1488,8 +1483,7 @@ export default function WattWorksLandingPage() {
         }
         .hero-title-line span {
           display: inline-block;
-          font-size: clamp(2.4rem, 7vw, 5.5rem);
-          line-height: 1.05;
+font-size: clamp(1.8rem, 4.5vw, 4rem);          line-height: 1.05;
           font-weight: 800;
           color: white;
           letter-spacing: -2px;
@@ -1683,7 +1677,7 @@ export default function WattWorksLandingPage() {
           background: var(--bg-light);
           padding: 8px 20px;
           border-radius: 50px;
-          font-size: 0.8rem;
+          font-size: 1.8rem;
           font-weight: 600;
           border: 1px solid #e2e8f0;
         }

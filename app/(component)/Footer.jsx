@@ -35,7 +35,7 @@ export default function Footer() {
 
             {/* Company */}
             <div>
-              <h4>Company</h4>
+              <h4>Also Visit</h4>
 
               <ul>
                 <li>
@@ -46,9 +46,9 @@ export default function Footer() {
                   <Link href="/services">Services</Link>
                 </li>
 
-                <li>
+                {/* <li>
                   <Link href="/projects">Projects</Link>
-                </li>
+                </li> */}
 
                 <li>
                   <Link href="/contact">Contact</Link>
@@ -58,7 +58,7 @@ export default function Footer() {
 
             {/* Services */}
             {/* Services */}
-            <div>
+            {/* <div>
               <h4>Services</h4>
 
               <ul>
@@ -84,10 +84,10 @@ export default function Footer() {
                   <Link href="/services/ev-charging">EV Charging</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Support */}
-            <div>
+            {/* <div>
               <h4>Support</h4>
 
               <ul>
@@ -99,7 +99,7 @@ export default function Footer() {
                   <Link href="/contact">Free Consultation</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div className="footer-bottom">
