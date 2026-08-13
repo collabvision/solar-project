@@ -643,7 +643,7 @@ export default function WattWorksLandingPage() {
             reduce electricity costs and achieve energy independence.
           </p>
           <a href="https://wa.me/919845853002" className="cta-pill-btn">
-            Get a Free Solar Assessment <span className="arrow-circle">↗</span>
+            Contact Now <span className="arrow-circle">↗</span>
           </a>
         </div>
 
