@@ -1325,8 +1325,8 @@ export default function WattWorksLandingPage() {
             Make the switch today and start saving for the next 25 years.
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <a href="https://wa.me/919845853002" className="cta-pill-btn dark">
-              Request Your Free Solar Consultation{" "}
+            <a href="./contact" className="cta-pill-btn dark">
+              Contact Us{" "}
               <span className="arrow-circle">↗</span>
             </a>
           </div>
