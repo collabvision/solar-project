@@ -496,18 +496,23 @@ export default function AboutHero() {
               {
                 image: "./others/team-member1.jpeg",
                 name: "Your Name",
-                role: "Managing Director",
+                role: "Co Founder and Head - Technical Operations",
               },
               {
                 image: "./others/team-member2.jpeg",
                 name: "Your Name",
-                role: "Project Director",
+                role: "Co-Founder and Head Digital marketing",
               },
               {
                 image: "./others/team-member3.jpeg",
                 name: "Your Name",
-                role: "Senior Engineer",
+                role: "Head  - Sales and Marketing",
               },
+                {
+                image: "./others/team-member.jpeg",
+                name: "Your Name",
+                role: "Regional Head Sales ( Goa )",
+              }
             ].map((member) => (
               <div
                 key={member.role}
@@ -530,13 +535,13 @@ export default function AboutHero() {
                       <h3 className="truncate text-xl font-black text-white sm:text-l">
                         {member.name}
                       </h3>
-                      <p className="mt-1 truncate text-[10px] font-semibold uppercase text-white/80 ">
-                        {member.role}
-                      </p>
+                    <p className="mt-1 line-clamp-3 whitespace-normal break-words text-[12px] font-semibold uppercase leading-tight text-white/80">
+  {member.role}
+</p>
                     </div>
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/20 backdrop-blur-xl sm:h-14 sm:w-14">
+                    {/* <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/20 backdrop-blur-xl sm:h-14 sm:w-14">
                       <Users className="h-5 w-5 text-white sm:h-6 sm:w-6" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -807,7 +812,7 @@ export default function AboutHero() {
             {/* EV CHARGING INFRASTRUCTURE */}
             <div className="group relative min-h-[300px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:col-span-2 sm:rounded-[32px] lg:col-span-2 lg:min-h-0">
               <img
-                src="./others/rooftop2.jpeg"
+                src="./others/ev.jpeg"
                 alt="EV Charging Infrastructure"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -1326,12 +1331,12 @@ export default function AboutHero() {
 
             {/* CTA */}
             <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-5">
-              <button className="w-full rounded-full bg-white px-8 py-4 text-center font-semibold text-slate-900 transition hover:scale-105 sm:w-auto">
+              <a href="./contact" className="w-full rounded-full bg-white px-8 py-4 text-center font-semibold text-slate-900 transition hover:scale-105 sm:w-auto">
                 Contact Our Team
-              </button>
-              <button className="w-full rounded-full border border-white/20 bg-white/10 px-8 py-4 text-center font-semibold text-white backdrop-blur-xl transition hover:bg-white hover:text-slate-900 sm:w-auto">
+              </a>
+              {/* <button className="w-full rounded-full border border-white/20 bg-white/10 px-8 py-4 text-center font-semibold text-white backdrop-blur-xl transition hover:bg-white hover:text-slate-900 sm:w-auto">
                 Explore Our Projects
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

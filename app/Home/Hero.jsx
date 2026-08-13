@@ -46,7 +46,7 @@ const DEPT_CONTENT = {
     badge: "Residential & Commercial",
     title: "Rooftop Solar Systems Built Around Your Roof",
     body: "Customized rooftop solar solutions for homes, apartments, commercial buildings, educational institutions, hospitals, and industries — engineered for maximum shadow-free generation.",
-    cta: "contactnow",
+    cta: "contact now",
     img: "./others/rooftop3.jpeg",
   },
   epc: {
