@@ -1308,11 +1308,9 @@ export default function WattWorksLandingPage() {
               lineHeight: 1.7,
             }}
           >
-            At WattWorks Energies Private Limited., we believe clean energy is
-            not just an investment — it is a commitment to a sustainable future.
-            Our mission is to help businesses and homeowners harness the power
-            of the sun through reliable, affordable, and high-performance solar
-            solutions.
+            To provide quality-driven renewable energy solutions that deliver
+            long-term savings, reduce operational costs and are supported by
+            professional execution and lifelong customer service.
           </p>
           <p
             style={{
@@ -1326,8 +1324,7 @@ export default function WattWorksLandingPage() {
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <a href="./contact" className="cta-pill-btn dark">
-              Contact Us{" "}
-              <span className="arrow-circle">↗</span>
+              Contact Us <span className="arrow-circle">↗</span>
             </a>
           </div>
         </div>
@@ -1687,7 +1684,7 @@ export default function WattWorksLandingPage() {
           text-align: center;
           letter-spacing: -1.5px;
           max-width: 900px;
-          margin: 0 auto 80px;
+          margin: 0 auto 40px;
           line-height: 1.2;
         }
         .split-grid-layout {
