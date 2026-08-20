@@ -47,7 +47,7 @@ const DEPT_CONTENT = {
     title: "Rooftop Solar Systems Built Around Your Roof",
     body: "Customized rooftop solar solutions for homes, apartments, commercial buildings, educational institutions, hospitals, and industries — engineered for maximum shadow-free generation.",
     cta: "contact now",
-    img: "./others/rooftop3.jpeg",
+    img: "./others/rooftop-solar.jpg",
   },
   epc: {
     tagColor: "rgba(16,185,129,0.12)",
@@ -206,6 +206,52 @@ const PROJECTS = [
     img: "./others/rooftop5.jpeg",
     name: "RCC Rooftop Satara - 210 KW",
     location: "Khatav, Satara",
+    note: "Live & Generating",
+    noteColor: "#3b82f6",
+  },
+   {
+    status: "Completed",
+    dotColor: "#10b981",
+    img: "./others/industry-rooftop60.jpeg",
+    name: "Industrial Rooftop - 60 KW",
+    location: "",
+    note: "Live & Generating",
+    noteColor: "#3b82f6",
+  },
+    {
+    status: "Completed",
+    dotColor: "#10b981",
+    img: "./others/solar-parking.jpg",
+    name: "Solar Parking Shed - 30 KW",
+    location: "",
+    note: "Live & Generating",
+    noteColor: "#3b82f6",
+  },
+     {
+    status: "Completed",
+    dotColor: "#10b981",
+    img: "./others/car-bus-port.jpg",
+    name: "Carport/Busport - 45 KW",
+    location: "",
+    note: "Live & Generating",
+    noteColor: "#3b82f6",
+  },
+       {
+    status: "Completed",
+    dotColor: "#10b981",
+    img: "./others/hotelroof.jpeg",
+    name: "Hotel Rooftop - 25 KW",
+    location: "",
+    note: "Live & Generating",
+    noteColor: "#3b82f6",
+  },
+       
+        {
+    status: "Completed",
+    dotColor: "#10b981",
+    img: "./others/dg-pv-synch-device.jpg",
+    name: "60 KW Plant with DG PV Synch Device",
+    location: "",
     note: "Live & Generating",
     noteColor: "#3b82f6",
   },
@@ -751,7 +797,7 @@ export default function WattWorksLandingPage() {
 
             <div className="asym-card tilt-card">
               <img
-                src="./others/rooftop2.jpeg"
+                src="./others/explore-options.jpeg"
                 alt="Rooftop solar installation"
               />
               <div className="card-overlay">
@@ -896,7 +942,7 @@ export default function WattWorksLandingPage() {
 
             <div className="fac-card tilt-card">
               <img
-                src="./others/rooftop3.jpeg"
+                src="./others/grounded-mounted.jpeg"
                 alt="Ground mounted solar plant"
               />
               <div className="fac-overlay">

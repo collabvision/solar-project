@@ -224,7 +224,7 @@ export default function ServicesPage() {
           Net Metering
         </>
       ),
-      image: "./others/rooftop2.jpeg",
+      image: "./others/netmeter.jpeg",
       imageTitle: "Approval Management",
       imageDesc:
         "Complete support for utility approvals and net metering services.",
@@ -260,7 +260,7 @@ export default function ServicesPage() {
           Energy Projects
         </>
       ),
-      image: "./others/Residential_Rooftop_Structure-3_KW.jpeg",
+      image: "./others/finance.jpeg",
       imageTitle: "Solar Financing",
       imageDesc:
         "Flexible financing options for residential, commercial and industrial solar projects.",

@@ -82,7 +82,7 @@ export default function AboutHero() {
           {/* Heading */}
           <div className="mb-10 text-center sm:mb-14">
             <span className="inline-flex rounded-full mt-4 border border-white/40 bg-white/70 px-4 py-2 text-xs font-semibold shadow-lg backdrop-blur-xl sm:px-5 sm:text-sm">
-              ABOUT WattWorks ENERGIES
+              ABOUT WATTWORKS ENERGIES
             </span>
 
             <h2 className="mt-6 text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl">
@@ -92,13 +92,10 @@ export default function AboutHero() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
-              WattWorks Energies Private Limited. is a leading renewable energy
-              company dedicated to helping homes, businesses, industries and
-              institutions transition to clean, affordable and sustainable
-              power. Since 2020, we have been delivering reliable solar
-              solutions across Maharashtra, Karnataka and Goa, enabling
-              customers to reduce electricity costs, achieve energy independence
-              and contribute to a greener future.
+              Since 2020, we have been delivering reliable solar energy
+              solutions across Maharashtra, Karnataka, and Goa, helping our
+              customers reduce electricity costs, move towards energy
+              independence, and contribute to a greener future.
             </p>
           </div>
 
@@ -119,12 +116,17 @@ export default function AboutHero() {
                   Solutions.
                 </h1>
                 <p className="mt-6 text-base leading-7 text-slate-500 sm:leading-8">
-                  Earlier known as WattWorks Energies Private Limited., we
-                  specialize in Engineering, Procurement, Installation,
-                  Commissioning, Project Management Consultancy, Engineering
-                  Consultancy, Energy Audits, Transformer & Substation
-                  Installation, Solar Financing and complete Operation &
-                  Maintenance services for renewable energy projects.
+                  We provide end-to-end solutions covering solar EPC, rooftop
+                  and ground-mounted solar plants, energy audits, ESCOM
+                  liaisoning, solar financing support, EV charging stations,
+                  solar carports, building-integrated solar roofs,
+                  domestic-scale wind turbines, and AMC services.
+                  <br/>
+                  At WattWorks,
+                  our work goes beyond installation. We believe in creating
+                  energy systems that help customers reduce electricity costs,
+                  improve energy efficiency, and build long-term value while
+                  contributing to a greener future.
                 </p>
 
                 {/* Features */}
@@ -495,24 +497,24 @@ export default function AboutHero() {
             {[
               {
                 image: "./others/team-member1.jpeg",
-                name: "Your Name",
+                name: "Sanjay Patil",
                 role: "Co Founder and Head - Technical Operations",
               },
               {
                 image: "./others/team-member2.jpeg",
-                name: "Your Name",
+                name: "Uma Patil",
                 role: "Co-Founder and Head Digital marketing",
               },
               {
                 image: "./others/team-member3.jpeg",
-                name: "Your Name",
+                name: "Niranjan Hanji",
                 role: "Head  - Sales and Marketing",
               },
-                {
+              {
                 image: "./others/team-member.jpeg",
-                name: "Your Name",
+                name: "Mario Dias",
                 role: "Regional Head Sales ( Goa )",
-              }
+              },
             ].map((member) => (
               <div
                 key={member.role}
@@ -535,9 +537,9 @@ export default function AboutHero() {
                       <h3 className="truncate text-xl font-black text-white sm:text-l">
                         {member.name}
                       </h3>
-                    <p className="mt-1 line-clamp-3 whitespace-normal break-words text-[12px] font-semibold uppercase leading-tight text-white/80">
-  {member.role}
-</p>
+                      <p className="mt-1 line-clamp-3 whitespace-normal break-words text-[12px] font-semibold uppercase leading-tight text-white/80">
+                        {member.role}
+                      </p>
                     </div>
                     {/* <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/20 backdrop-blur-xl sm:h-14 sm:w-14">
                       <Users className="h-5 w-5 text-white sm:h-6 sm:w-6" />
@@ -586,19 +588,16 @@ export default function AboutHero() {
                 OUR MISSION
               </span>
 
-              <h3 className="mt-5 text-3xl font-black text-slate-900 sm:text-4xl">
-                Accelerating
-                <br />
-                Renewable Energy
-              </h3>
-
               <div className="mt-8 h-1 w-24 rounded-full bg-slate-900" />
 
               <p className="mt-8 text-base leading-7 text-slate-600 sm:text-lg sm:leading-9">
-                To provide quality-driven renewable energy solutions that
-                deliver long-term savings, reduce operational costs and are
-                supported by professional execution and lifelong customer
-                service.
+                To deliver reliable, efficient and high-quality renewable energy
+                solutions that help customers reduce operational costs and
+                achieve long-term savings. Through transparent guidance,
+                professional execution and committed support throughout the life
+                of every installation, we strive to create lasting value across
+                solar energy, EV charging systems, domestic-scale wind energy
+                and emerging clean-energy technologies.
               </p>
             </div>
 
@@ -612,18 +611,12 @@ export default function AboutHero() {
                 OUR VISION
               </span>
 
-              <h3 className="mt-5 text-3xl font-black text-white sm:text-4xl">
-                A Cleaner,
-                <br />
-                Greener Future
-              </h3>
-
               <div className="mt-8 h-1 w-24 rounded-full bg-white" />
 
               <p className="mt-8 text-base leading-7 text-slate-300 sm:text-lg sm:leading-9">
-                To empower customers with dependable renewable energy solutions
-                that lower energy costs and create a cleaner, energy-secure
-                future.
+                To be a trusted partner in renewable energy sector, empowering
+                homes, businesses and communities to reduce energy costs and
+                build a cleaner, more sustainable and energy-secure future
               </p>
             </div>
 
@@ -761,7 +754,7 @@ export default function AboutHero() {
             {/* GROUND MOUNTED */}
             <div className="group relative min-h-[300px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl sm:col-span-2 sm:rounded-[32px] lg:col-span-2 lg:min-h-0">
               <img
-                src="./others/rooftop3.jpeg"
+                src="./others/ground-mounted.jpg"
                 alt="Ground Mounted Solar"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -788,7 +781,7 @@ export default function AboutHero() {
             {/* SOLAR CARPORTS */}
             <div className="group relative min-h-[260px] overflow-hidden rounded-[26px] border border-white/60 bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:rounded-[32px] lg:min-h-0">
               <img
-                src="./others/rooftop4.jpeg"
+                src="./others/solar-carports.jpg"
                 alt="Solar Carports"
                 className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
@@ -799,7 +792,7 @@ export default function AboutHero() {
                     <Car className="h-7 w-7 text-white" />
                   </div>
                   <h3 className="text-lg font-black leading-tight text-white">
-                    Solar Carports, Industrial Solar Structures
+                    Solar Carports
                   </h3>
                 </div>
                 <p className="text-sm leading-6 text-white/85">
@@ -1294,7 +1287,7 @@ export default function AboutHero() {
 
             <p className="mt-6 text-base leading-7 text-white/80 sm:mt-8 sm:text-lg sm:leading-9">
               At WattWorks Energies, we believe that our responsibility extends
-              beyond project completion. Through dedicated after-sales service,
+              beyond project commissioning. Through dedicated after-sales service,
               annual maintenance programs, performance monitoring, and technical
               support, we ensure that every solar plant continues to deliver
               maximum value for decades.
@@ -1331,7 +1324,10 @@ export default function AboutHero() {
 
             {/* CTA */}
             <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-5">
-              <a href="./contact" className="w-full rounded-full bg-white px-8 py-4 text-center font-semibold text-slate-900 transition hover:scale-105 sm:w-auto">
+              <a
+                href="./contact"
+                className="w-full rounded-full bg-white px-8 py-4 text-center font-semibold text-slate-900 transition hover:scale-105 sm:w-auto"
+              >
                 Contact Our Team
               </a>
               {/* <button className="w-full rounded-full border border-white/20 bg-white/10 px-8 py-4 text-center font-semibold text-white backdrop-blur-xl transition hover:bg-white hover:text-slate-900 sm:w-auto">
