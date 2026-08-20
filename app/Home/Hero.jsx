@@ -942,7 +942,7 @@ export default function WattWorksLandingPage() {
 
             <div className="fac-card tilt-card">
               <img
-                src="./others/grounded-mounted.jpeg"
+                src="./others/ground-mounted.jpg"
                 alt="Ground mounted solar plant"
               />
               <div className="fac-overlay">
