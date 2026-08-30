@@ -125,7 +125,7 @@ const page = () => {
             <div className="relative">
               <div className="overflow-hidden rounded-[40px] shadow-2xl">
                 <img
-                  src="./others/rooftop5.jpeg"
+                  src="./others/rooftop-contact-us.jpg"
                   alt="Solar Energy"
                   className="h-[720px] w-full object-cover"
                 />

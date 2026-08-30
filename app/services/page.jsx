@@ -149,7 +149,7 @@ export default function ServicesPage() {
           Everyday Use
         </>
       ),
-      image: "./others/RCC_Floor_Mounted_Structure-5KW.jpeg",
+      image: "./others/solar-powered-products.jpeg",
       imageTitle: "Smart Solar Products",
       imageDesc:
         "Reliable solar-powered appliances designed to reduce energy consumption while supporting sustainable living.",
@@ -187,7 +187,7 @@ export default function ServicesPage() {
           Efficiency
         </>
       ),
-      image: "./others/ai_rooftop.jpeg",
+      image: "./others/energy-audit.png",
       imageTitle: "Improve Efficiency",
       imageDesc:
         "Detailed assessments that help organizations reduce energy consumption and improve operational efficiency.",

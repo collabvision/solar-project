@@ -772,7 +772,7 @@ export default function WattWorksLandingPage() {
                 About Us
               </span>
               <h3>
-                WattWorks Energies Private Limited. is a trusted solar energy
+                WattWorks Energies Private Limited, is a trusted solar energy
                 company providing end-to-end solar power solutions since 2020.
               </h3>
               <p>
