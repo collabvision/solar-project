@@ -968,7 +968,7 @@ export default function WattWorksLandingPage() {
             <div className="fac-card tilt-card">
               <img src="./others/rooftop4.jpeg" alt="Solar carport" />
               <div className="fac-overlay">
-                <span className="fac-tag">Carports</span>
+                <span className="fac-tag">Commercial rooftop</span>
                 <div>
                   <h3
                     style={{
